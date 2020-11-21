@@ -1,0 +1,1876 @@
+[   0.031][v][cplayer] mpv 0.32.0 Copyright © 2000-2020 mpv/MPlayer/mplayer2 projects
+[   0.031][v][cplayer]  built on Sat Oct  3 13:35:42 UTC 2020
+[   0.031][v][cplayer] ffmpeg library versions:
+[   0.031][v][cplayer]    libavutil       56.51.100
+[   0.031][v][cplayer]    libavcodec      58.91.100
+[   0.031][v][cplayer]    libavformat     58.45.100
+[   0.031][v][cplayer]    libswscale      5.7.100
+[   0.031][v][cplayer]    libavfilter     7.85.100
+[   0.031][v][cplayer]    libswresample   3.7.100
+[   0.031][v][cplayer] ffmpeg version: 4.3.1
+[   0.031][v][cplayer] 
+[   0.031][v][cplayer] Configuration: waf configure --prefix=/usr --libdir=/usr/lib --confdir=/etc/mpv --docdir=/usr/share/examples/mpv --enable-dvdnav --enable-cdda --enable-libmpv-shared --enable-dvbin --enable-libarchive --enable-alsa --disable-caca --enable-jack --enable-lua --disable-oss-audio --enable-pulse --disable-sdl2 --disable-libsmbclient --enable-sndio --disable-vapoursynth --enable-vdpau --enable-wayland --enable-x11 --enable-vulkan --enable-shaderc --zshdir=/usr/share/zsh/site-functions
+[   0.031][v][cplayer] List of enabled features: 52 aligned_alloc alsa asm atomics build-date cdda cplayer cplugins debug-build drm drmprime dvbin dvdnav egl egl-drm egl-helpers egl-x11 fchmod ffmpeg gbm gbm.h gl gl-wayland gl-x11 glibc-thread-name glob glob-posix gnuc gpl iconv jack jpeg lcms2 libarchive libass libass-osd libav-any libavcodec libavdevice libavutil libbluray libdl libm libmpv-shared libplacebo librt linux-fstatfs lua memfd_create optimize plain-gl posix posix-or-mingw posix-spawn posix-spawn-native pthreads pulse rubberband shaderc shaderc-shared sndio stdatomic uchardet vaapi vaapi-drm vaapi-egl vaapi-vulkan vaapi-wayland vaapi-x-egl vaapi-x11 vdpau vdpau-gl-x11 vt.h vulkan wayland wayland-protocols x11 xv zlib
+[   0.031][d][osc] Loading lua script @osc.lua...
+[   0.031][d][ytdl_hook] Loading lua script @ytdl_hook.lua...
+[   0.031][d][stats] Loading lua script @stats.lua...
+[   0.031][d][console] Loading lua script @console.lua...
+[   0.031][d][ytdl_hook] loading mp.defaults
+[   0.031][v][cplayer] Waiting for scripts...
+[   0.031][d][stats] loading mp.defaults
+[   0.031][d][osc] loading mp.defaults
+[   0.034][d][console] loading mp.defaults
+[   0.035][d][osc] loading @osc.lua
+[   0.035][d][stats] loading @stats.lua
+[   0.036][d][ytdl_hook] loading @ytdl_hook.lua
+[   0.037][d][console] loading @console.lua
+[   0.038][d][ytdl_hook] reading options for ytdl_hook 
+[   0.038][d][stats] reading options for stats 
+[   0.038][d][stats] script-opts/stats.conf not found. 
+[   0.038][d][ytdl_hook] script-opts/ytdl_hook.conf not found. 
+[   0.038][d][stats] lua-settings/stats.conf not found. 
+[   0.038][d][ytdl_hook] lua-settings/ytdl_hook.conf not found. 
+[   0.039][d][console] reading options for console 
+[   0.039][d][console] script-opts/console.conf not found. 
+[   0.039][d][console] lua-settings/console.conf not found. 
+[   0.041][d][cplayer] Run command: define-section, flags=64, args=["input_stats", "i script-binding stats/display-stats\nI script-binding stats/display-stats-toggle\n", "default"]
+[   0.041][d][cplayer] Run command: enable-section, flags=64, args=["input_stats", "allow-hide-cursor+allow-vo-dragging"]
+[   0.041][d][cplayer] Run command: define-section, flags=64, args=["input_forced_stats", "", "force"]
+[   0.041][d][cplayer] Run command: enable-section, flags=64, args=["input_forced_stats", "allow-hide-cursor+allow-vo-dragging"]
+[   0.042][d][osc] reading options for osc 
+[   0.042][d][osc] script-opts/osc.conf not found. 
+[   0.042][d][osc] lua-settings/osc.conf not found. 
+[   0.043][d][cplayer] Run command: define-section, flags=64, args=["showhide", "mouse_move script-binding osc/__keybinding1\nmouse_leave script-binding osc/__keybinding2\n", "force"]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=["showhide_wc", "mouse_move script-binding osc/__keybinding3\nmouse_leave script-binding osc/__keybinding4\n", "force"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=["showhide", "allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=["showhide_wc", "allow-hide-cursor+allow-vo-dragging"]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=["input", "mbtn_left script-binding osc/__keybinding5\nshift+mbtn_left script-binding osc/__keybinding6\nmbtn_right script-binding osc/__keybinding7\nmbtn_mid script-binding osc/__keybinding8\nwheel_up script-binding osc/__keybinding9\nwheel_down script-binding osc/__keybinding10\nmbtn_left_dbl ignore\nshift+mbtn_left_dbl ignore\nmbtn_right_dbl ignore\n", "force"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[   0.044][d][cplayer] Run command: define-section, flags=64, args=["window-controls", "mbtn_left script-binding osc/__keybinding11\n", "force"]
+[   0.044][d][cplayer] Run command: enable-section, flags=64, args=["window-controls", ""]
+[   0.044][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[   0.044][d][cplayer] Run command: disable-section, flags=64, args=["window-controls"]
+[   0.044][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.044][v][cplayer] Set property: shared-script-properties -> 1
+[   0.044][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[   0.044][d][cplayer] Run command: disable-section, flags=64, args=["window-controls"]
+[   0.044][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.044][v][cplayer] Set property: shared-script-properties -> 1
+[   0.045][d][osc] osc_init 
+[   0.045][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.045][v][cplayer] Set property: shared-script-properties -> 1
+[   0.046][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.7.2 (COMPLEX)
+[   0.046][v][osd/libass] Setting up fonts...
+[   0.056][v][osd/libass] Using font provider fontconfig
+[   0.056][v][osd/libass] Done.
+[   0.056][d][cplayer] Run command: define-section, flags=64, args=["input_console", "", "default"]
+[   0.056][d][cplayer] Run command: enable-section, flags=64, args=["input_console", "allow-hide-cursor+allow-vo-dragging"]
+[   0.057][d][cplayer] Run command: define-section, flags=64, args=["input_forced_console", "", "force"]
+[   0.057][d][cplayer] Run command: enable-section, flags=64, args=["input_forced_console", "allow-hide-cursor+allow-vo-dragging"]
+[   0.057][v][cplayer] Done loading scripts.
+[   0.057][v][cplayer] Running hook: ytdl_hook/on_load
+[   0.058][v][ytdl_hook] ytdl:// hook 
+[   0.058][d][cplayer] Run command: define-section, flags=64, args=["input_osc", "", "default"]
+[   0.058][d][cplayer] Run command: enable-section, flags=64, args=["input_osc", "allow-hide-cursor+allow-vo-dragging"]
+[   0.058][v][ytdl_hook] not a ytdl:// url 
+[   0.058][d][cplayer] Run command: define-section, flags=64, args=["input_forced_osc", "", "force"]
+[   0.058][d][cplayer] Run command: enable-section, flags=64, args=["input_forced_osc", "allow-hide-cursor+allow-vo-dragging"]
+[   0.059][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.7.2 (COMPLEX)
+[   0.059][v][ffmpeg] Opening https://www.youtube.com/watch?v=E05HgehixqM
+[   0.059][v][osd/libass] Setting up fonts...
+[   0.068][v][osd/libass] Using font provider fontconfig
+[   0.068][v][osd/libass] Done.
+[   0.087][d][osc] osc_init 
+[   0.089][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   0.089][v][cplayer] Set property: shared-script-properties -> 1
+[   0.099][d][ffmpeg] tcp: Starting connection attempt to 216.58.207.78 port 443
+[   0.132][d][ffmpeg] tcp: Successfully connected to 216.58.207.78 port 443
+[   0.354][d][ffmpeg] resize stream to 131072 bytes
+[   0.355][v][ffmpeg] Mime-type: 'text/html; charset=utf-8'
+[   0.355][d][ffmpeg] Stream opened successfully.
+[   0.355][v][demux] Trying demuxers for level=normal.
+[   0.355][d][demux] Trying demuxer: disc (force-level: normal)
+[   0.355][d][demux] Trying demuxer: edl (force-level: normal)
+[   0.355][d][demux] Trying demuxer: cue (force-level: normal)
+[   0.355][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   0.355][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   0.355][d][demux] Trying demuxer: mkv (force-level: normal)
+[   0.355][d][demux] Trying demuxer: libarchive (force-level: normal)
+[   0.356][d][demux] Trying demuxer: lavf (force-level: normal)
+[   0.663][d][ffmpeg] resize stream to 262144 bytes
+[   0.706][d][ffmpeg] resize stream to 524288 bytes
+[   0.765][d][ffmpeg] resize stream to 1048576 bytes
+[   0.832][d][ffmpeg] resize stream to 2097152 bytes
+[   0.876][v][lavf] No format found, try lowering probescore or forcing the format.
+[   0.876][d][demux] Trying demuxer: mf (force-level: normal)
+[   0.876][d][demux] Trying demuxer: playlist (force-level: normal)
+[   0.876][d][demux] Trying demuxer: null (force-level: normal)
+[   0.876][v][demux] Trying demuxers for level=unsafe.
+[   0.876][d][demux] Trying demuxer: disc (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: edl (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: cue (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: rawaudio (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: rawvideo (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: mkv (force-level: unsafe)
+[   0.876][d][demux] Trying demuxer: libarchive (force-level: unsafe)
+[   0.877][d][demux] Trying demuxer: lavf (force-level: unsafe)
+[   0.926][d][ffmpeg] resize stream to 1048576 bytes
+[   0.966][d][ffmpeg] resize stream to 2097152 bytes
+[   1.008][v][lavf] No format found, try lowering probescore or forcing the format.
+[   1.008][d][demux] Trying demuxer: mf (force-level: unsafe)
+[   1.008][d][demux] Trying demuxer: playlist (force-level: unsafe)
+[   1.008][d][demux] Trying demuxer: null (force-level: unsafe)
+[   1.008][d][ffmpeg] AVIOContext: Statistics: 941890 bytes read, 0 seeks
+[   1.008][v][cplayer] Opening failed or was aborted: https://www.youtube.com/watch?v=E05HgehixqM
+[   1.009][v][cplayer] Running hook: ytdl_hook/on_load_fail
+[   1.009][v][ytdl_hook] full hook 
+[   1.009][d][ytdl_hook] Running: youtube-dl --no-warnings -J --flat-playlist --sub-format ass/srt/best --format bestvideo[height<=?1080]+bestaudio/best --all-subs --no-playlist -- https://www.youtube.com/watch?v=E05HgehixqM 
+[   1.009][d][cplayer] Run command: subprocess, flags=64, args=["youtube-dl,--no-warnings,-J,--flat-playlist,--sub-format,ass/srt/best,--format,bestvideo[height<=?1080]+bestaudio/best,--all-subs,--no-playlist,--,https://www.youtube.com/watch?v=E05HgehixqM", "yes", "67108864", "yes", "yes"]
+[   3.663][v][ytdl_hook] youtube-dl succeeded! 
+[   3.663][d][ytdl_hook] ytdl parsing took 0.00215 seconds 
+[   3.663][d][ytdl_hook] No fragments to join into EDL 
+[   3.663][d][ytdl_hook] No fragments to join into EDL 
+[   3.663][d][ytdl_hook] streamurl: edl://!no_clip;!no_chapters;%999%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;!new_stream;!no_clip;!no_chapters;%909%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes; 
+[   3.663][v][cplayer] Set property: stream-open-filename="edl://!no_clip;!no_chapters;%999%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;!new_stream;!no_clip;!no_chapters;%909%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;" -> 1
+[   3.663][v][cplayer] Set property: file-local-options/force-media-title="Non vi serve un nuovo computer, vi serve un nuovo software" -> 1
+[   3.664][v][cplayer] Set property: file-local-options/stream-lavf-o={} -> 1
+[   3.664][d][ytdl_hook] script running time: 0.0026649999999999 seconds 
+[   3.664][v][edl] Opening edl://!no_clip;!no_chapters;%999%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;!new_stream;!no_clip;!no_chapters;%909%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;
+[   3.664][d][edl] resize stream to 131072 bytes
+[   3.664][d][edl] Stream opened successfully.
+[   3.664][v][demux] Trying demuxers for level=request.
+[   3.664][d][demux] Trying demuxer: edl (force-level: request)
+[   3.664][v][demux] Detected file format: Edit decision list
+[   3.664][v][demux] Stream is not seekable.
+[   3.664][v][demux] Opening segment 0...
+[   3.664][v][ffmpeg] Opening https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes
+[   3.699][d][ffmpeg] tcp: Starting connection attempt to 151.99.51.172 port 443
+[   3.707][d][ffmpeg] tcp: Successfully connected to 151.99.51.172 port 443
+[   3.756][d][ffmpeg] resize stream to 131072 bytes
+[   3.756][v][ffmpeg] Mime-type: 'video/webm'
+[   3.756][d][ffmpeg] Stream opened successfully.
+[   3.756][v][demux] Trying demuxers for level=normal.
+[   3.756][d][demux] Trying demuxer: disc (force-level: normal)
+[   3.756][d][demux] Trying demuxer: edl (force-level: normal)
+[   3.758][d][demux] Trying demuxer: cue (force-level: normal)
+[   3.759][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   3.759][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   3.759][d][demux] Trying demuxer: mkv (force-level: normal)
+[   3.759][d][mkv] Found the head...
+[   3.759][d][mkv] + a segment...
+[   3.759][d][mkv] Parsing seek head...
+[   3.759][d][mkv] |+ segment information...
+[   3.759][d][mkv] float 1659308.000000
+[   3.759][d][mkv] | + muxing app: google/video-file
+[   3.759][d][mkv] | + writing app: google/video-file
+[   3.759][d][mkv] | + timecode scale: 1000000
+[   3.759][d][mkv] | + duration: 1659.308s
+[   3.759][d][mkv] |+ segment tracks...
+[   3.759][d][mkv] | + a track...
+[   3.759][d][mkv] |  + Track number: 1
+[   3.759][d][mkv] |  + Track type: Video
+[   3.759][d][mkv] |  + Video track
+[   3.759][d][mkv] |   + Pixel width: 1920
+[   3.759][d][mkv] |   + Pixel height: 960
+[   3.759][d][mkv] |    + Matrix: bt.709
+[   3.759][d][mkv] |    + Primaries: bt.709
+[   3.759][d][mkv] |    + Gamma: bt.1886
+[   3.759][d][mkv] |    + Levels: limited
+[   3.759][d][mkv] |  + Codec ID: V_VP9
+[   3.759][d][mkv] |  + Default duration: 16.683ms ( = 59.940 fps)
+[   3.759][v][mkv] Parsing cues...
+[   3.760][d][mkv] |+ found cluster
+[   3.760][v][mkv] All headers are parsed!
+[   3.760][v][demux] Detected file format: Matroska
+[   3.760][v][demux] Opening segment 0...
+[   3.760][v][ffmpeg] Opening https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes
+[   3.796][d][ffmpeg] tcp: Starting connection attempt to 151.99.51.172 port 443
+[   3.803][d][ffmpeg] tcp: Successfully connected to 151.99.51.172 port 443
+[   3.854][d][ffmpeg] resize stream to 131072 bytes
+[   3.855][v][ffmpeg] Mime-type: 'audio/webm'
+[   3.855][d][ffmpeg] Stream opened successfully.
+[   3.855][v][demux] Trying demuxers for level=normal.
+[   3.855][d][demux] Trying demuxer: disc (force-level: normal)
+[   3.855][d][demux] Trying demuxer: edl (force-level: normal)
+[   3.856][d][demux] Trying demuxer: cue (force-level: normal)
+[   3.856][d][demux] Trying demuxer: rawaudio (force-level: normal)
+[   3.856][d][demux] Trying demuxer: rawvideo (force-level: normal)
+[   3.856][d][demux] Trying demuxer: mkv (force-level: normal)
+[   3.856][d][mkv] Found the head...
+[   3.856][d][mkv] + a segment...
+[   3.856][d][mkv] Parsing seek head...
+[   3.856][d][mkv] |+ segment information...
+[   3.856][d][mkv] float 1659341.000000
+[   3.856][d][mkv] | + muxing app: google/video-file
+[   3.856][d][mkv] | + writing app: google/video-file
+[   3.856][d][mkv] | + timecode scale: 1000000
+[   3.856][d][mkv] | + duration: 1659.341s
+[   3.856][d][mkv] |+ segment tracks...
+[   3.856][d][mkv] float 48000.000000
+[   3.856][d][mkv] | + a track...
+[   3.856][d][mkv] |  + Track number: 1
+[   3.856][d][mkv] |  + Track type: Audio
+[   3.856][d][mkv] |  + Audio track
+[   3.856][d][mkv] |   + Sampling frequency: 48000.000000
+[   3.856][d][mkv] |   + Bit depth: 16
+[   3.856][d][mkv] |   + Channels: 2
+[   3.856][d][mkv] |  + Codec ID: A_OPUS
+[   3.856][d][mkv] |  + CodecPrivate, length 19
+[   3.856][v][mkv] Parsing cues...
+[   3.856][d][mkv] |+ found cluster
+[   3.856][v][mkv] All headers are parsed!
+[   3.863][v][demux] Detected file format: Matroska
+[   3.863][d][demux] Trying demuxer: timeline (force-level: force)
+[   3.864][v][timeline] Timeline segments:
+[   3.864][v][timeline]   0:     0.000000 -  1659.308000 [    0.000000] (0)
+[   3.864][v][timeline]   source 0:'https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes'
+[   3.864][v][timeline]  --- new parallel stream ---
+[   3.864][v][timeline]   0:     0.000000 -  1659.341000 [    0.000000] (1)
+[   3.864][v][timeline]   source 0:'https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes'
+[   3.864][v][timeline] Total duration: 1659.341000
+[   3.864][v][demux] Detected file format: multi/mkv (timeline segments)
+[   3.864][v][cplayer] Opening done: edl://!no_clip;!no_chapters;%999%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=303&aitags=133%2C134%2C135%2C136%2C160%2C242%2C243%2C244%2C247%2C278%2C298%2C299%2C302%2C303&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=video%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=137076169&dur=1659.307&lmt=1604492997737258&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5535432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Caitags%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAJq9bG_RPLFRbytY78O9l3jTndnvAD3Ri546Pcz3RD-tAiEAnAu7zHDOm3v61w5oZJWqPtFVmTYyzBqFG7EnllafTtU%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;!new_stream;!no_clip;!no_chapters;%909%https://r1---sn-uxaxpu5ap5-jp5l.googlevideo.com/videoplayback?expire=1605732472&ei=FzS1X-z4NvSF6dsP-pi32AU&ip=62.211.198.134&id=o-AG2mf7eZfupxnLCe5Lw4hCVfKDAuoyW5GBv9QYjcTSyo&itag=251&source=youtube&requiressl=yes&mh=uo&mm=31%2C29&mn=sn-uxaxpu5ap5-jp5l%2Csn-hpa7kn7d&ms=au%2Crdu&mv=m&mvi=1&pl=24&initcwndbps=1111250&vprv=1&mime=audio%2Fwebm&ns=BxeCN3qS9xPB-SkCXyexZAEF&gir=yes&clen=22287674&dur=1659.341&lmt=1604485820354432&mt=1605710689&fvip=1&keepalive=yes&beids=9466588&c=WEB&txp=5531432&n=vhYfj9-R96LQWBv&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgYUDg307L3pjeEmVFYFdx7BpNKtmqLqeyQPbFJYA1YpwCIQCjnI_Dq1D6N3DH4ST3A_zTqCvGeLL5H_7_aqcXId9yZQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRgIhAJ3UV5XhZd_PpIsKW2yVzOLSWepiEj40ms4jF5kT7D9rAiEA8BNVdXSlB_xfRzdY6AIBwChU18sB1b7m6QcQgQi3kXE%3D&ratebypass=yes;
+[   3.864][v][cplayer] Running hook: ytdl_hook/on_preloaded
+[   3.864][d][osc] osc_init 
+[   3.864][v][ytdl_hook] Setting chapters 
+[   3.865][v][cplayer] Set property: chapter-list=[{"title":"00:00 - Perché questo video","time":0},{"title":"02:00 - Vi serve un nuovo software!","time":120},{"title":"03:22 - Plasma + Herbstluftwm","time":202},{"title":"07:16 - Workspace per VSCode","time":436},{"title":"08:25 - Come usare i dotfiles","time":505},{"title":"09:58 - Dots: Bashrc","time":598},{"title":"10:29 - Dots: Rofi e Dmenu","time":629},{"title":"11:10 - Dots: Polybar","time":670},{"title":"15:35 - Tips per KDE Plasma","time":935},{"title":"16:14 - Perché Herbstluftwm","time":974},{"title":"17:40 - Dots: Herbstluftwm","time":1060},{"title":"24:55 - Temi di KDE Plasma","time":1495},{"title":"25:45 - Dove scaricare i dots","time":1545},{"title":"26:10 - Netbook con Void Linux e Spectrwm","time":1570},{"title":"27:14 - Avete domande?","time":1634}] -> 1
+[   3.865][v][timeline] select track 0
+[   3.865][v][timeline] select track 1
+[   3.865][i][cplayer]  (+) Video --vid=1 (*) (vp9 1920x960 59.940fps)
+[   3.865][i][cplayer]  (+) Audio --aid=1 --alang=eng (*) (opus 2ch 48000Hz)
+[   3.865][v][vo/gpu] Probing for best GPU context.
+[   3.865][v][vo/gpu/opengl] Initializing GPU context 'wayland'
+[   3.865][v][vo/gpu/opengl] Initializing GPU context 'x11egl'
+[   3.865][v][vo/gpu/x11] X11 opening display: :1
+[   3.870][d][vo/gpu/x11] X11 running at 1366x768 (":1" => local display)
+[   3.870][d][vo/gpu/x11] Detected wm supports NetWM.
+[   3.870][d][vo/gpu/x11] Detected wm supports FULLSCREEN state.
+[   3.870][d][vo/gpu/x11] Detected wm supports BELOW state.
+[   3.870][d][vo/gpu/x11] Detected wm supports ABOVE state.
+[   3.871][v][vo/gpu/x11] Display 0 (LVDS-1): [0, 0, 1366, 768] @ 60.002246 FPS
+[   3.871][v][vo/gpu/x11] Current display FPS: 60.002246
+[   3.890][v][vo/gpu/opengl] EGL_VERSION=1.4
+[   3.890][v][vo/gpu/opengl] EGL_VENDOR=Mesa Project
+[   3.890][v][vo/gpu/opengl] EGL_CLIENT_APIS=OpenGL OpenGL_ES 
+[   3.890][v][vo/gpu/opengl] Trying to create Desktop OpenGL context.
+[   3.890][d][vo/gpu/opengl] Chosen EGLConfig:
+[   3.890][d][vo/gpu/opengl]   EGL_CONFIG_ID=3
+[   3.890][d][vo/gpu/opengl]   EGL_RED_SIZE=8
+[   3.890][d][vo/gpu/opengl]   EGL_GREEN_SIZE=8
+[   3.890][d][vo/gpu/opengl]   EGL_BLUE_SIZE=8
+[   3.890][d][vo/gpu/opengl]   EGL_ALPHA_SIZE=0
+[   3.890][d][vo/gpu/opengl]   EGL_COLOR_BUFFER_TYPE=12430
+[   3.891][d][vo/gpu/opengl]   EGL_CONFIG_CAVEAT=12344
+[   3.891][d][vo/gpu/opengl]   EGL_CONFORMANT=77
+[   3.892][v][vo/gpu/opengl] Choosing visual EGL config 0x3, visual ID 0x21
+[   3.901][v][vo/gpu/opengl] GL_VERSION='3.3 (Core Profile) Mesa 20.2.2'
+[   3.901][v][vo/gpu/opengl] Detected desktop OpenGL 3.3.
+[   3.901][v][vo/gpu/opengl] GL_VENDOR='Intel Open Source Technology Center'
+[   3.901][v][vo/gpu/opengl] GL_RENDERER='Mesa DRI Intel(R) HD Graphics 3000 (SNB GT2)'
+[   3.901][v][vo/gpu/opengl] GL_SHADING_LANGUAGE_VERSION='3.30'
+[   3.901][d][vo/gpu/opengl] Combined OpenGL extensions string:
+[   3.901][d][vo/gpu/opengl] EGL_ANDROID_blob_cache EGL_ANDROID_native_fence_sync EGL_CHROMIUM_sync_control EGL_EXT_buffer_age EGL_EXT_create_context_robustness EGL_EXT_image_dma_buf_import EGL_EXT_image_dma_buf_import_modifiers EGL_EXT_swap_buffers_with_damage EGL_KHR_config_attribs EGL_KHR_create_context EGL_KHR_create_context_no_error EGL_KHR_fence_sync EGL_KHR_get_all_proc_addresses EGL_KHR_gl_colorspace EGL_KHR_gl_renderbuffer_image EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_3D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_image EGL_KHR_image_base EGL_KHR_image_pixmap EGL_KHR_no_config_context EGL_KHR_reusable_sync EGL_KHR_surfaceless_context EGL_KHR_swap_buffers_with_damage EGL_EXT_pixel_format_float EGL_KHR_wait_sync EGL_MESA_configless_context EGL_MESA_drm_image EGL_MESA_image_dma_buf_export EGL_MESA_query_driver EGL_NOK_texture_from_pixmap EGL_WL_bind_wayland_display  GL_3DFX_texture_compression_FXT1 GL_AMD_draw_buffers_blend GL_AMD_seamless_cubemap_per_texture GL_AMD_shader_trinary_minmax GL_AMD_texture_texture4 GL_AMD_vertex_shader_layer GL_AMD_vertex_shader_viewport_index GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_APPLE_object_purgeable GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_compressed_texture_pixel_storage GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_shader GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_program_interface_query GL_ARB_provoking_vertex GL_ARB_robustness GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_objects GL_ARB_shader_subroutine GL_ARB_shader_texture_lod GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_sync GL_ARB_texture_barrier GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_performance_query GL_KHR_blend_equation_advanced GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robustness GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_conditional_render GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
+[   3.901][v][vo/gpu/opengl] Loaded extension GL_ARB_get_program_binary.
+[   3.901][v][vo/gpu/opengl] Loaded extension GL_ARB_buffer_storage.
+[   3.901][v][vo/gpu/opengl] Loaded extension GL_ARB_arrays_of_arrays.
+[   3.901][v][vo/gpu/opengl] Loaded extension GL_ARB_debug_output.
+[   3.905][d][vo/gpu/opengl] Texture formats:
+[   3.905][d][vo/gpu/opengl]   NAME       COMP*TYPE SIZE           DEPTH PER COMP.
+[   3.905][d][vo/gpu/opengl]   r8         1*unorm   1B    LF CR ST {8}
+[   3.905][d][vo/gpu/opengl]   rg8        2*unorm   2B    LF CR ST {8 8}
+[   3.905][d][vo/gpu/opengl]   rgb8       3*unorm   3B    LF CR ST {8 8 8}
+[   3.905][d][vo/gpu/opengl]   rgba8      4*unorm   4B    LF CR ST {8 8 8 8}
+[   3.905][d][vo/gpu/opengl]   r16        1*unorm   2B    LF CR ST {16}
+[   3.905][d][vo/gpu/opengl]   rg16       2*unorm   4B    LF CR ST {16 16}
+[   3.905][d][vo/gpu/opengl]   rgb16      3*unorm   6B    LF CR ST {16 16 16}
+[   3.905][d][vo/gpu/opengl]   rgba16     4*unorm   8B    LF CR ST {16 16 16 16}
+[   3.905][d][vo/gpu/opengl]   r8ui       1*uint    1B       CR ST {8}
+[   3.905][d][vo/gpu/opengl]   rg8ui      2*uint    2B       CR ST {8 8}
+[   3.905][d][vo/gpu/opengl]   rgb8ui     3*uint    3B          ST {8 8 8}
+[   3.905][d][vo/gpu/opengl]   rgba8ui    4*uint    4B       CR ST {8 8 8 8}
+[   3.905][d][vo/gpu/opengl]   r16ui      1*uint    2B       CR ST {16}
+[   3.905][d][vo/gpu/opengl]   rg16ui     2*uint    4B       CR ST {16 16}
+[   3.905][d][vo/gpu/opengl]   rgb16ui    3*uint    6B          ST {16 16 16}
+[   3.905][d][vo/gpu/opengl]   rgba16ui   4*uint    8B       CR ST {16 16 16 16}
+[   3.905][d][vo/gpu/opengl]   r16f       1*float   4B    LF CR ST {32/16}
+[   3.905][d][vo/gpu/opengl]   rg16f      2*float   8B    LF CR ST {32/16 32/16}
+[   3.905][d][vo/gpu/opengl]   rgb16f     3*float  12B    LF CR ST {32/16 32/16 32/16}
+[   3.905][d][vo/gpu/opengl]   rgba16f    4*float  16B    LF CR ST {32/16 32/16 32/16 32/16}
+[   3.905][d][vo/gpu/opengl]   r32f       1*float   4B    LF CR ST {32}
+[   3.905][d][vo/gpu/opengl]   rg32f      2*float   8B    LF CR ST {32 32}
+[   3.905][d][vo/gpu/opengl]   rgb32f     3*float  12B    LF CR ST {32 32 32}
+[   3.905][d][vo/gpu/opengl]   rgba32f    4*float  16B    LF CR ST {32 32 32 32}
+[   3.905][d][vo/gpu/opengl]   rgb10_a2   4*unorm   4B    LF CR ST {0/10 0/10 0/10 0/2}
+[   3.905][d][vo/gpu/opengl]   rgba12     4*unorm   8B    LF CR ST {16 16 16 16}
+[   3.905][d][vo/gpu/opengl]   rgb10      3*unorm   6B    LF CR ST {16 16 16}
+[   3.905][d][vo/gpu/opengl]   rgb565     3*unorm   2B    LF    ST {0/8 0/8 0/8}
+[   3.905][d][vo/gpu/opengl]  LA = LUMINANCE_ALPHA hack format
+[   3.905][d][vo/gpu/opengl]  LF = linear filterable
+[   3.905][d][vo/gpu/opengl]  CR = can be used for render targets
+[   3.905][d][vo/gpu/opengl]  ST = can be used for storable images
+[   3.905][d][vo/gpu/opengl] Image formats:
+[   3.905][d][vo/gpu/opengl]   yuv444p => 3 planes 1x1 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuv420p => 3 planes 2x2 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   gray => 1 planes 1x1 8/0 [r8] (r)
+[   3.905][d][vo/gpu/opengl]   gray16 => 1 planes 1x1 16/0 [r16] (r)
+[   3.905][d][vo/gpu/opengl]   uyvy422
+[   3.905][d][vo/gpu/opengl]   nv12 => 2 planes 2x2 8/0 [r8/rg8] (r/gb)
+[   3.905][d][vo/gpu/opengl]   p010 => 2 planes 2x2 16/6 [r16/rg16] (r/gb)
+[   3.905][d][vo/gpu/opengl]   nv24 => 2 planes 1x1 8/0 [r8/rg8] (r/gb)
+[   3.905][d][vo/gpu/opengl]   argb => 1 planes 1x1 8/0 [rgba8] (argb)
+[   3.905][d][vo/gpu/opengl]   bgra => 1 planes 1x1 8/0 [rgba8] (bgra)
+[   3.905][d][vo/gpu/opengl]   abgr => 1 planes 1x1 8/0 [rgba8] (abgr)
+[   3.905][d][vo/gpu/opengl]   rgba => 1 planes 1x1 8/0 [rgba8] (rgba)
+[   3.905][d][vo/gpu/opengl]   bgr24 => 1 planes 1x1 8/0 [rgb8] (bgr)
+[   3.905][d][vo/gpu/opengl]   rgb24 => 1 planes 1x1 8/0 [rgb8] (rgb)
+[   3.905][d][vo/gpu/opengl]   0rgb => 1 planes 1x1 8/0 [rgba8] (_rgb)
+[   3.905][d][vo/gpu/opengl]   bgr0 => 1 planes 1x1 8/0 [rgba8] (bgr)
+[   3.905][d][vo/gpu/opengl]   0bgr => 1 planes 1x1 8/0 [rgba8] (_bgr)
+[   3.905][d][vo/gpu/opengl]   rgb0 => 1 planes 1x1 8/0 [rgba8] (rgb)
+[   3.905][d][vo/gpu/opengl]   rgba64 => 1 planes 1x1 16/0 [rgba16] (rgba)
+[   3.905][d][vo/gpu/opengl]   rgb565 => 1 planes 1x1 0/0 [rgb565] (rgb)
+[   3.905][d][vo/gpu/opengl]   rgb30 => 1 planes 1x1 10/0 [rgb10_a2] (rgb)
+[   3.905][d][vo/gpu/opengl]   vdpau
+[   3.905][d][vo/gpu/opengl]   vdpau_output
+[   3.905][d][vo/gpu/opengl]   vaapi
+[   3.905][d][vo/gpu/opengl]   dxva2_vld
+[   3.905][d][vo/gpu/opengl]   mmal
+[   3.905][d][vo/gpu/opengl]   videotoolbox
+[   3.905][d][vo/gpu/opengl]   drm_prime
+[   3.905][d][vo/gpu/opengl]   yuyv422
+[   3.905][d][vo/gpu/opengl]   yuv422p => 3 planes 2x1 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuv410p => 3 planes 4x4 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuv411p => 3 planes 4x1 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   monow
+[   3.905][d][vo/gpu/opengl]   monob
+[   3.905][d][vo/gpu/opengl]   pal8
+[   3.905][d][vo/gpu/opengl]   yuvj422p => 3 planes 2x1 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   uyyvyy411
+[   3.905][d][vo/gpu/opengl]   bgr8
+[   3.905][d][vo/gpu/opengl]   bgr4
+[   3.905][d][vo/gpu/opengl]   bgr4_byte
+[   3.905][d][vo/gpu/opengl]   rgb8
+[   3.905][d][vo/gpu/opengl]   rgb4
+[   3.905][d][vo/gpu/opengl]   rgb4_byte
+[   3.905][d][vo/gpu/opengl]   nv21 => 2 planes 2x2 8/0 [r8/rg8] (r/bg)
+[   3.905][d][vo/gpu/opengl]   gray16be
+[   3.905][d][vo/gpu/opengl]   yuv440p => 3 planes 1x2 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuvj440p => 3 planes 1x2 8/0 [r8/r8/r8] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuva420p => 4 planes 2x2 8/0 [r8/r8/r8/r8] (r/g/b/a)
+[   3.905][d][vo/gpu/opengl]   rgb48be
+[   3.905][d][vo/gpu/opengl]   rgb48 => 1 planes 1x1 16/0 [rgb16] (rgb)
+[   3.905][d][vo/gpu/opengl]   rgb565be
+[   3.905][d][vo/gpu/opengl]   rgb555be
+[   3.905][d][vo/gpu/opengl]   rgb555
+[   3.905][d][vo/gpu/opengl]   bgr565be
+[   3.905][d][vo/gpu/opengl]   bgr565
+[   3.905][d][vo/gpu/opengl]   bgr555be
+[   3.905][d][vo/gpu/opengl]   bgr555
+[   3.905][d][vo/gpu/opengl]   vaapi_moco
+[   3.905][d][vo/gpu/opengl]   vaapi_idct
+[   3.905][d][vo/gpu/opengl]   yuv420p16 => 3 planes 2x2 16/0 [r16/r16/r16] (r/g/b)
+[   3.905][d][vo/gpu/opengl]   yuv420p16be
+[   3.905][d][vo/gpu/opengl]   yuv422p16 => 3 planes 2x1 16/0 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv422p16be
+[   3.906][d][vo/gpu/opengl]   yuv444p16 => 3 planes 1x1 16/0 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv444p16be
+[   3.906][d][vo/gpu/opengl]   rgb444
+[   3.906][d][vo/gpu/opengl]   rgb444be
+[   3.906][d][vo/gpu/opengl]   bgr444
+[   3.906][d][vo/gpu/opengl]   bgr444be
+[   3.906][d][vo/gpu/opengl]   ya8 => 1 planes 1x1 8/0 [rg8] (ra)
+[   3.906][d][vo/gpu/opengl]   bgr48be
+[   3.906][d][vo/gpu/opengl]   bgr48 => 1 planes 1x1 16/0 [rgb16] (bgr)
+[   3.906][d][vo/gpu/opengl]   yuv420p9be
+[   3.906][d][vo/gpu/opengl]   yuv420p9 => 3 planes 2x2 16/-7 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv420p10be
+[   3.906][d][vo/gpu/opengl]   yuv420p10 => 3 planes 2x2 16/-6 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv422p10be
+[   3.906][d][vo/gpu/opengl]   yuv422p10 => 3 planes 2x1 16/-6 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv444p9be
+[   3.906][d][vo/gpu/opengl]   yuv444p9 => 3 planes 1x1 16/-7 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv444p10be
+[   3.906][d][vo/gpu/opengl]   yuv444p10 => 3 planes 1x1 16/-6 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv422p9be
+[   3.906][d][vo/gpu/opengl]   yuv422p9 => 3 planes 2x1 16/-7 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   gbrp => 3 planes 1x1 8/0 [r8/r8/r8] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   gbrp9be
+[   3.906][d][vo/gpu/opengl]   gbrp9 => 3 planes 1x1 16/-7 [r16/r16/r16] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   gbrp10be
+[   3.906][d][vo/gpu/opengl]   gbrp10 => 3 planes 1x1 16/-6 [r16/r16/r16] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   gbrp16be
+[   3.906][d][vo/gpu/opengl]   gbrp16 => 3 planes 1x1 16/0 [r16/r16/r16] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   yuva422p => 4 planes 2x1 8/0 [r8/r8/r8/r8] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva444p => 4 planes 1x1 8/0 [r8/r8/r8/r8] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva420p9be
+[   3.906][d][vo/gpu/opengl]   yuva420p9 => 4 planes 2x2 16/-7 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva422p9be
+[   3.906][d][vo/gpu/opengl]   yuva422p9 => 4 planes 2x1 16/-7 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva444p9be
+[   3.906][d][vo/gpu/opengl]   yuva444p9 => 4 planes 1x1 16/-7 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva420p10be
+[   3.906][d][vo/gpu/opengl]   yuva420p10 => 4 planes 2x2 16/-6 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva422p10be
+[   3.906][d][vo/gpu/opengl]   yuva422p10 => 4 planes 2x1 16/-6 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva444p10be
+[   3.906][d][vo/gpu/opengl]   yuva444p10 => 4 planes 1x1 16/-6 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva420p16be
+[   3.906][d][vo/gpu/opengl]   yuva420p16 => 4 planes 2x2 16/0 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva422p16be
+[   3.906][d][vo/gpu/opengl]   yuva422p16 => 4 planes 2x1 16/0 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva444p16be
+[   3.906][d][vo/gpu/opengl]   yuva444p16 => 4 planes 1x1 16/0 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   xyz12 => 1 planes 1x1 16/4 [rgb16] (rgb)
+[   3.906][d][vo/gpu/opengl]   xyz12be
+[   3.906][d][vo/gpu/opengl]   nv16 => 2 planes 2x1 8/0 [r8/rg8] (r/gb)
+[   3.906][d][vo/gpu/opengl]   nv20 => 2 planes 2x1 16/-6 [r16/rg16] (r/gb)
+[   3.906][d][vo/gpu/opengl]   nv20be
+[   3.906][d][vo/gpu/opengl]   rgba64be
+[   3.906][d][vo/gpu/opengl]   bgra64be
+[   3.906][d][vo/gpu/opengl]   bgra64 => 1 planes 1x1 16/0 [rgba16] (bgra)
+[   3.906][d][vo/gpu/opengl]   yvyu422
+[   3.906][d][vo/gpu/opengl]   ya16be
+[   3.906][d][vo/gpu/opengl]   ya16 => 1 planes 1x1 16/0 [rg16] (ra)
+[   3.906][d][vo/gpu/opengl]   gbrap => 4 planes 1x1 8/0 [r8/r8/r8/r8] (g/b/r/a)
+[   3.906][d][vo/gpu/opengl]   gbrap16be
+[   3.906][d][vo/gpu/opengl]   gbrap16 => 4 planes 1x1 16/0 [r16/r16/r16/r16] (g/b/r/a)
+[   3.906][d][vo/gpu/opengl]   qsv
+[   3.906][d][vo/gpu/opengl]   d3d11va_vld
+[   3.906][d][vo/gpu/opengl]   cuda
+[   3.906][d][vo/gpu/opengl]   yuv420p12be
+[   3.906][d][vo/gpu/opengl]   yuv420p12 => 3 planes 2x2 16/-4 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv420p14be
+[   3.906][d][vo/gpu/opengl]   yuv420p14 => 3 planes 2x2 16/-2 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv422p12be
+[   3.906][d][vo/gpu/opengl]   yuv422p12 => 3 planes 2x1 16/-4 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv422p14be
+[   3.906][d][vo/gpu/opengl]   yuv422p14 => 3 planes 2x1 16/-2 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv444p12be
+[   3.906][d][vo/gpu/opengl]   yuv444p12 => 3 planes 1x1 16/-4 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv444p14be
+[   3.906][d][vo/gpu/opengl]   yuv444p14 => 3 planes 1x1 16/-2 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   gbrp12be
+[   3.906][d][vo/gpu/opengl]   gbrp12 => 3 planes 1x1 16/-4 [r16/r16/r16] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   gbrp14be
+[   3.906][d][vo/gpu/opengl]   gbrp14 => 3 planes 1x1 16/-2 [r16/r16/r16] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   yuvj411p => 3 planes 4x1 8/0 [r8/r8/r8] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   bayer_bggr8
+[   3.906][d][vo/gpu/opengl]   bayer_rggb8
+[   3.906][d][vo/gpu/opengl]   bayer_gbrg8
+[   3.906][d][vo/gpu/opengl]   bayer_grbg8
+[   3.906][d][vo/gpu/opengl]   bayer_bggr16
+[   3.906][d][vo/gpu/opengl]   bayer_bggr16be
+[   3.906][d][vo/gpu/opengl]   bayer_rggb16
+[   3.906][d][vo/gpu/opengl]   bayer_rggb16be
+[   3.906][d][vo/gpu/opengl]   bayer_gbrg16
+[   3.906][d][vo/gpu/opengl]   bayer_gbrg16be
+[   3.906][d][vo/gpu/opengl]   bayer_grbg16
+[   3.906][d][vo/gpu/opengl]   bayer_grbg16be
+[   3.906][d][vo/gpu/opengl]   xvmc
+[   3.906][d][vo/gpu/opengl]   yuv440p10 => 3 planes 1x2 16/-6 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv440p10be
+[   3.906][d][vo/gpu/opengl]   yuv440p12 => 3 planes 1x2 16/-4 [r16/r16/r16] (r/g/b)
+[   3.906][d][vo/gpu/opengl]   yuv440p12be
+[   3.906][d][vo/gpu/opengl]   ayuv64 => 1 planes 1x1 16/0 [rgba16] (argb)
+[   3.906][d][vo/gpu/opengl]   ayuv64be
+[   3.906][d][vo/gpu/opengl]   videotoolbox_vl
+[   3.906][d][vo/gpu/opengl]   p010be
+[   3.906][d][vo/gpu/opengl]   gbrap12be
+[   3.906][d][vo/gpu/opengl]   gbrap12 => 4 planes 1x1 16/-4 [r16/r16/r16/r16] (g/b/r/a)
+[   3.906][d][vo/gpu/opengl]   gbrap10be
+[   3.906][d][vo/gpu/opengl]   gbrap10 => 4 planes 1x1 16/-6 [r16/r16/r16/r16] (g/b/r/a)
+[   3.906][d][vo/gpu/opengl]   mediacodec
+[   3.906][d][vo/gpu/opengl]   gray12be
+[   3.906][d][vo/gpu/opengl]   gray12 => 1 planes 1x1 16/-4 [r16] (r)
+[   3.906][d][vo/gpu/opengl]   gray10be
+[   3.906][d][vo/gpu/opengl]   gray10 => 1 planes 1x1 16/-6 [r16] (r)
+[   3.906][d][vo/gpu/opengl]   p016 => 2 planes 2x2 16/0 [r16/rg16] (r/gb)
+[   3.906][d][vo/gpu/opengl]   p016be
+[   3.906][d][vo/gpu/opengl]   d3d11
+[   3.906][d][vo/gpu/opengl]   gray9be
+[   3.906][d][vo/gpu/opengl]   gray9 => 1 planes 1x1 16/-7 [r16] (r)
+[   3.906][d][vo/gpu/opengl]   gbrpf32be
+[   3.906][d][vo/gpu/opengl]   gbrpf32 => 3 planes 1x1 32/0 [r16f/r16f/r16f] (g/b/r)
+[   3.906][d][vo/gpu/opengl]   gbrapf32be
+[   3.906][d][vo/gpu/opengl]   gbrapf32 => 4 planes 1x1 32/0 [r16f/r16f/r16f/r16f] (g/b/r/a)
+[   3.906][d][vo/gpu/opengl]   opencl
+[   3.906][d][vo/gpu/opengl]   gray14be
+[   3.906][d][vo/gpu/opengl]   gray14 => 1 planes 1x1 16/-2 [r16] (r)
+[   3.906][d][vo/gpu/opengl]   grayf32be
+[   3.906][d][vo/gpu/opengl]   grayf32 => 1 planes 1x1 32/0 [r16f] (r)
+[   3.906][d][vo/gpu/opengl]   yuva422p12be
+[   3.906][d][vo/gpu/opengl]   yuva422p12 => 4 planes 2x1 16/-4 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   yuva444p12be
+[   3.906][d][vo/gpu/opengl]   yuva444p12 => 4 planes 1x1 16/-4 [r16/r16/r16/r16] (r/g/b/a)
+[   3.906][d][vo/gpu/opengl]   nv42 => 2 planes 1x1 8/0 [r8/rg8] (r/bg)
+[   3.906][d][vo/gpu/opengl]   vulkan
+[   3.906][d][vo/gpu/opengl]   y210be
+[   3.906][d][vo/gpu/opengl]   y210
+[   3.906][v][vo/gpu] Testing FBO format rgba16f
+[   3.906][d][vo/gpu] Resizing texture: 16x16
+[   3.906][v][vo/gpu] Using FBO format rgba16f.
+[   3.906][v][vo/gpu] Disabling HDR peak computation (one or more of the following is not supported: compute shaders=0, SSBO=0).
+[   3.907][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[   3.907][v][vo/gpu] Assuming 60.002246 FPS for display sync.
+[   3.908][v][vd] Container reported FPS: 59.940060
+[   3.914][v][vd] Codec list:
+[   3.914][v][vd]     vp9 - Google VP9
+[   3.914][v][vd]     vp9_v4l2m2m (vp9) - V4L2 mem2mem VP9 decoder wrapper
+[   3.915][v][vd]     libvpx-vp9 (vp9) - libvpx VP9
+[   3.915][v][vd]     vp9_cuvid (vp9) - Nvidia CUVID VP9 decoder
+[   3.915][v][vd] Opening decoder vp9
+[   3.915][v][vd] Looking at hwdec vp9-nvdec...
+[   3.915][v][vo/gpu] Loading hwdec driver 'vaapi-egl'
+[   3.915][v][vo/gpu/vaapi-egl] using VAAPI EGL interop
+[   3.915][v][vo/gpu/vaapi-egl] Trying to open a x11 VA display...
+[   3.915][d][vo/gpu/vaapi-egl/vaapi] libva: VA-API version 1.9.0
+[   3.916][d][vo/gpu/vaapi-egl/vaapi] libva: Trying to open /usr/lib/dri/iHD_drv_video.so
+[   3.916][d][vo/gpu/vaapi-egl/vaapi] libva: va_openDriver() returns -1
+[   3.916][d][vo/gpu/vaapi-egl/vaapi] libva: Trying to open /usr/lib/dri/i965_drv_video.so
+[   3.919][d][vo/gpu/vaapi-egl/vaapi] libva: Found init function __vaDriverInit_1_9
+[   3.919][d][vo/gpu/vaapi-egl/vaapi] libva: va_openDriver() returns 0
+[   3.919][v][vo/gpu/vaapi-egl/vaapi] Initialized VAAPI: version 1.9
+[   3.919][d][ffmpeg] AVHWDeviceContext: VAAPI driver: Intel i965 driver for Intel(R) Sandybridge Mobile - 2.4.1.
+[   3.919][d][ffmpeg] AVHWDeviceContext: Driver not found in known nonstandard list, using standard behaviour.
+[   3.919][v][vo/gpu/vaapi-egl] Going to probe surface formats (may log bogus errors)...
+[   3.920][d][vo/gpu/vaapi-egl] Supported formats:
+[   3.920][d][vo/gpu/vaapi-egl]  nv12
+[   3.920][d][vo/gpu/vaapi-egl]  yuv420p
+[   3.920][d][vo/gpu/vaapi-egl]  rgba
+[   3.920][d][vo/gpu/vaapi-egl]  rgb0
+[   3.920][v][vo/gpu/vaapi-egl] Done probing surface formats.
+[   3.920][v][vo/gpu] Loading hwdec driver 'vdpau-gl'
+[   3.920][v][vo/gpu] Loading failed.
+[   3.920][v][vo/gpu] Loading hwdec driver 'drmprime-drm'
+[   3.920][v][vo/gpu/drmprime-drm] Failed to retrieve DRM fd from native display.
+[   3.920][v][vo/gpu] Loading failed.
+[   3.920][v][vd] Could not create device.
+[   3.920][v][vd] Looking at hwdec vp9-vaapi...
+[   3.920][v][vd] Trying hardware decoding via vp9-vaapi.
+[   3.922][v][vd] Selected codec: vp9 (Google VP9)
+[   3.922][v][vf] User filter list:
+[   3.922][v][vf]   (empty)
+[   3.925][v][ad] Codec list:
+[   3.925][v][ad]     opus - Opus
+[   3.925][v][ad]     libopus (opus) - libopus Opus
+[   3.925][v][ad] Opening decoder opus
+[   3.925][v][ad] Requesting 1 threads for decoding.
+[   3.925][v][ad] Selected codec: opus (Opus)
+[   3.925][v][af] User filter list:
+[   3.925][v][af]   (empty)
+[   3.925][v][cplayer] Starting playback...
+[   3.926][v][timeline] switch to segment 0
+[   3.926][v][mkv] select track 0
+[   3.926][v][timeline] switch to segment 0
+[   3.926][v][mkv] select track 0
+[   3.926][d][timeline] stream 1: resize index to 128
+[   3.926][v][vd] Pixel formats supported by decoder: vdpau cuda vaapi_vld yuv420p
+[   3.926][v][vd] Codec profile: Profile 0 (0x0)
+[   3.926][e][ffmpeg/video] vp9: No support for codec vp9 profile 0.
+[   3.926][v][vd] Hardware decoding of this stream is unsupported?
+[   3.926][v][vd] Requesting pixfmt 'yuv420p' from decoder.
+[   3.940][v][vd] Falling back to software decoding.
+[   3.940][v][vd] Detected 4 logical cores.
+[   3.940][v][vd] Requesting 5 threads for decoding.
+[   3.940][d][vd] DR parameter change to 1920x960 yuv420p align=64
+[   3.940][d][vd] Allocating new DR image...
+[   3.940][d][vd] ...failed..
+[   3.940][v][vd] DR failed - disabling.
+[   3.951][v][vd] Using software decoding.
+[   3.951][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[   3.951][v][vd] Using container aspect ratio.
+[   3.951][v][vf] [in] 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.957][v][vf] [userdeint] 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.957][v][vf] [userdeint] (disabled)
+[   3.957][v][vf] [autorotate] 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.957][v][vf] [autorotate] (disabled)
+[   3.957][v][vf] [convert] 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.957][v][vf] [convert] (disabled)
+[   3.957][v][vf] [out] 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.957][v][af] [in] 48000Hz stereo 2ch floatp
+[   3.957][v][af] [userspeed] 48000Hz stereo 2ch floatp
+[   3.957][v][af] [userspeed] (disabled)
+[   3.957][v][af] [convert] 48000Hz stereo 2ch floatp
+[   3.958][v][ao] Trying audio driver 'alsa'
+[   3.958][v][ao/alsa] requested format: 48000 Hz, stereo channels, floatp
+[   3.958][v][ao/alsa] using ALSA version: 1.2.4
+[   3.958][v][ao/alsa] opening device 'default'
+[   3.962][d][ao/alsa] PCM setup:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ALSA <-> PulseAudio PCM I/O Plugin
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] Start HW params:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  U8 S16_LE S16_BE S24_LE S24_BE S32_LE S32_BE FLOAT_LE FLOAT_BE MU_LAW A_LAW S24_3LE S24_3BE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: [8 32]
+[   3.962][d][ao/alsa] FRAME_BITS: [8 1024]
+[   3.962][d][ao/alsa] CHANNELS: [1 32]
+[   3.962][d][ao/alsa] RATE: [1 384000]
+[   3.962][d][ao/alsa] PERIOD_TIME: (2 4294967295)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [1 1398102)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: (7 4294967295]
+[   3.962][d][ao/alsa] BUFFER_SIZE: [3 4194304]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] HW params after rate:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  U8 S16_LE S16_BE S24_LE S24_BE S32_LE S32_BE FLOAT_LE FLOAT_BE MU_LAW A_LAW S24_3LE S24_3BE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: [8 32]
+[   3.962][d][ao/alsa] FRAME_BITS: [8 1024]
+[   3.962][d][ao/alsa] CHANNELS: [1 32]
+[   3.962][d][ao/alsa] RATE: [1 384000]
+[   3.962][d][ao/alsa] PERIOD_TIME: (2 4294967295)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [1 1398102)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: (7 4294967295]
+[   3.962][d][ao/alsa] BUFFER_SIZE: [3 4194304]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] HW params after access:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  U8 S16_LE S16_BE S24_LE S24_BE S32_LE S32_BE FLOAT_LE FLOAT_BE MU_LAW A_LAW S24_3LE S24_3BE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: [8 32]
+[   3.962][d][ao/alsa] FRAME_BITS: [8 1024]
+[   3.962][d][ao/alsa] CHANNELS: [1 32]
+[   3.962][d][ao/alsa] RATE: [1 384000]
+[   3.962][d][ao/alsa] PERIOD_TIME: (2 4294967295)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [1 1398102)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: (7 4294967295]
+[   3.962][d][ao/alsa] BUFFER_SIZE: [3 4194304]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][v][ao/alsa] trying format float/14
+[   3.962][d][ao/alsa] HW params after format:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  FLOAT_LE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: 32
+[   3.962][d][ao/alsa] FRAME_BITS: [32 1024]
+[   3.962][d][ao/alsa] CHANNELS: [1 32]
+[   3.962][d][ao/alsa] RATE: [1 384000]
+[   3.962][d][ao/alsa] PERIOD_TIME: (2 4294967295)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [1 349526)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: (7 4294967295]
+[   3.962][d][ao/alsa] BUFFER_SIZE: [3 1048576]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] HW params after channels:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  FLOAT_LE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: 32
+[   3.962][d][ao/alsa] FRAME_BITS: 64
+[   3.962][d][ao/alsa] CHANNELS: 2
+[   3.962][d][ao/alsa] RATE: [1 384000]
+[   3.962][d][ao/alsa] PERIOD_TIME: (41 4294967295)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [16 174763)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: [125 4294967295]
+[   3.962][d][ao/alsa] BUFFER_SIZE: [48 524288]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] HW params after rate-2:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  FLOAT_LE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: 32
+[   3.962][d][ao/alsa] FRAME_BITS: 64
+[   3.962][d][ao/alsa] CHANNELS: 2
+[   3.962][d][ao/alsa] RATE: 48000
+[   3.962][d][ao/alsa] PERIOD_TIME: (333 3640896)
+[   3.962][d][ao/alsa] PERIOD_SIZE: [16 174763)
+[   3.962][d][ao/alsa] PERIOD_BYTES: [128 1398102)
+[   3.962][d][ao/alsa] PERIODS: [3 1024]
+[   3.962][d][ao/alsa] BUFFER_TIME: [1000 10922667)
+[   3.962][d][ao/alsa] BUFFER_SIZE: [48 524288]
+[   3.962][d][ao/alsa] BUFFER_BYTES: [384 4194304]
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] Going to set final HW params:
+[   3.962][d][ao/alsa] ---
+[   3.962][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.962][d][ao/alsa] FORMAT:  FLOAT_LE
+[   3.962][d][ao/alsa] SUBFORMAT:  STD
+[   3.962][d][ao/alsa] SAMPLE_BITS: 32
+[   3.962][d][ao/alsa] FRAME_BITS: 64
+[   3.962][d][ao/alsa] CHANNELS: 2
+[   3.962][d][ao/alsa] RATE: 48000
+[   3.962][d][ao/alsa] PERIOD_TIME: 25000
+[   3.962][d][ao/alsa] PERIOD_SIZE: 1200
+[   3.962][d][ao/alsa] PERIOD_BYTES: 9600
+[   3.962][d][ao/alsa] PERIODS: 4
+[   3.962][d][ao/alsa] BUFFER_TIME: 100000
+[   3.962][d][ao/alsa] BUFFER_SIZE: 4800
+[   3.962][d][ao/alsa] BUFFER_BYTES: 38400
+[   3.962][d][ao/alsa] TICK_TIME: ALL
+[   3.962][d][ao/alsa] ---
+[   3.970][d][ao/alsa] Final HW params:
+[   3.971][d][ao/alsa] ---
+[   3.971][d][ao/alsa] ACCESS:  RW_INTERLEAVED
+[   3.971][d][ao/alsa] FORMAT:  FLOAT_LE
+[   3.971][d][ao/alsa] SUBFORMAT:  STD
+[   3.971][d][ao/alsa] SAMPLE_BITS: 32
+[   3.971][d][ao/alsa] FRAME_BITS: 64
+[   3.971][d][ao/alsa] CHANNELS: 2
+[   3.971][d][ao/alsa] RATE: 48000
+[   3.971][d][ao/alsa] PERIOD_TIME: 25000
+[   3.971][d][ao/alsa] PERIOD_SIZE: 1200
+[   3.971][d][ao/alsa] PERIOD_BYTES: 9600
+[   3.971][d][ao/alsa] PERIODS: 4
+[   3.971][d][ao/alsa] BUFFER_TIME: 100000
+[   3.971][d][ao/alsa] BUFFER_SIZE: 4800
+[   3.971][d][ao/alsa] BUFFER_BYTES: 38400
+[   3.971][d][ao/alsa] TICK_TIME: [0 0]
+[   3.971][d][ao/alsa] ---
+[   3.971][v][ao/alsa] hw pausing supported: yes
+[   3.971][v][ao/alsa] buffersize: 4800 samples
+[   3.971][v][ao/alsa] period size: 1200 samples
+[   3.971][v][ao/alsa] device buffer: 4800 samples.
+[   3.971][v][ao/alsa] using soft-buffer of 9600 samples.
+[   3.971][i][cplayer] AO: [alsa] 48000Hz stereo 2ch float
+[   3.971][v][cplayer] AO: Description: ALSA audio output
+[   3.971][v][autoconvert] inserting resampler
+[   3.972][v][swresample] format change, reinitializing resampler
+[   3.972][v][swresample] 48000Hz stereo floatp -> 48000Hz stereo float
+[   3.972][v][af] [out] 48000Hz stereo 2ch float
+[   3.978][i][cplayer] VO: [gpu] 1920x960 yuv420p
+[   3.978][v][cplayer] VO: Description: Shader-based GPU Renderer
+[   3.978][v][vo/gpu] reconfig to 1920x960 yuv420p bt.709/bt.709/bt.1886/limited/display SP=1.000000 CL=mpeg2/4/h264
+[   3.979][d][vo/gpu] screen size: 1366x768
+[   3.988][v][vo/gpu/x11] not waiting for MapNotify
+[   3.988][v][vo/gpu] Resize: 1366x745
+[   3.989][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[   3.989][v][vo/gpu] Video source: 1920x960 (1:1)
+[   3.989][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[   3.989][v][vo/gpu] Video scale: 0.711458/0.711458
+[   3.989][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[   3.989][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[   3.989][v][vo/gpu] Reported display depth: 8
+[   3.989][v][vo/gpu] Texture for plane 0: 1920x960
+[   3.989][v][vo/gpu] Texture for plane 1: 960x480
+[   3.989][v][vo/gpu] Texture for plane 2: 960x480
+[   3.990][v][vo/gpu] Testing FBO format rgba16f
+[   3.990][d][vo/gpu] Resizing texture: 16x16
+[   3.990][v][vo/gpu] Using FBO format rgba16f.
+[   3.990][v][vo/gpu] No advanced processing required. Enabling dumb mode.
+[   4.012][d][vo/gpu/opengl] vertex shader source:
+[   4.012][d][vo/gpu/opengl] [  1] #version 330
+[   4.012][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   4.012][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   4.012][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   4.012][d][vo/gpu/opengl] [  5] in vec2 vertex_position;
+[   4.012][d][vo/gpu/opengl] [  6] in vec2 vertex_texcoord0;
+[   4.012][d][vo/gpu/opengl] [  7] out vec2 texcoord0;
+[   4.012][d][vo/gpu/opengl] [  8] in vec2 vertex_texcoord1;
+[   4.012][d][vo/gpu/opengl] [  9] out vec2 texcoord1;
+[   4.012][d][vo/gpu/opengl] [ 10] in vec2 vertex_texcoord2;
+[   4.012][d][vo/gpu/opengl] [ 11] out vec2 texcoord2;
+[   4.012][d][vo/gpu/opengl] [ 12] void main() {
+[   4.012][d][vo/gpu/opengl] [ 13] gl_Position = vec4(vertex_position, 1.0, 1.0);
+[   4.012][d][vo/gpu/opengl] [ 14] texcoord0 = vertex_texcoord0;
+[   4.012][d][vo/gpu/opengl] [ 15] texcoord1 = vertex_texcoord1;
+[   4.012][d][vo/gpu/opengl] [ 16] texcoord2 = vertex_texcoord2;
+[   4.012][d][vo/gpu/opengl] [ 17] }
+[   4.013][d][vo/gpu/opengl] fragment shader source:
+[   4.013][d][vo/gpu/opengl] [  1] #version 330
+[   4.013][d][vo/gpu/opengl] [  2] #define tex1D texture
+[   4.013][d][vo/gpu/opengl] [  3] #define tex3D texture
+[   4.013][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[   4.013][d][vo/gpu/opengl] [  5] out vec4 out_color;
+[   4.013][d][vo/gpu/opengl] [  6] in vec2 texcoord0;
+[   4.013][d][vo/gpu/opengl] [  7] in vec2 texcoord1;
+[   4.013][d][vo/gpu/opengl] [  8] in vec2 texcoord2;
+[   4.013][d][vo/gpu/opengl] [  9] uniform mat3 colormatrix;
+[   4.013][d][vo/gpu/opengl] [ 10] uniform vec3 colormatrix_c;
+[   4.013][d][vo/gpu/opengl] [ 11] uniform vec3 src_luma;
+[   4.013][d][vo/gpu/opengl] [ 12] uniform vec3 dst_luma;
+[   4.013][d][vo/gpu/opengl] [ 13] uniform sampler2D texture0;
+[   4.013][d][vo/gpu/opengl] [ 14] uniform vec2 texture_size0;
+[   4.013][d][vo/gpu/opengl] [ 15] uniform mat2 texture_rot0;
+[   4.013][d][vo/gpu/opengl] [ 16] uniform vec2 texture_off0;
+[   4.013][d][vo/gpu/opengl] [ 17] uniform vec2 pixel_size0;
+[   4.013][d][vo/gpu/opengl] [ 18] uniform sampler2D texture1;
+[   4.013][d][vo/gpu/opengl] [ 19] uniform vec2 texture_size1;
+[   4.013][d][vo/gpu/opengl] [ 20] uniform mat2 texture_rot1;
+[   4.013][d][vo/gpu/opengl] [ 21] uniform vec2 texture_off1;
+[   4.013][d][vo/gpu/opengl] [ 22] uniform vec2 pixel_size1;
+[   4.013][d][vo/gpu/opengl] [ 23] uniform sampler2D texture2;
+[   4.013][d][vo/gpu/opengl] [ 24] uniform vec2 texture_size2;
+[   4.013][d][vo/gpu/opengl] [ 25] uniform mat2 texture_rot2;
+[   4.013][d][vo/gpu/opengl] [ 26] uniform vec2 texture_off2;
+[   4.013][d][vo/gpu/opengl] [ 27] uniform vec2 pixel_size2;
+[   4.013][d][vo/gpu/opengl] [ 28] void main() {
+[   4.013][d][vo/gpu/opengl] [ 29] vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+[   4.013][d][vo/gpu/opengl] [ 30] color.r = 1.000000 * vec4(texture(texture0, texcoord0)).r;
+[   4.013][d][vo/gpu/opengl] [ 31] color.g = 1.000000 * vec4(texture(texture1, texcoord1)).r;
+[   4.013][d][vo/gpu/opengl] [ 32] color.b = 1.000000 * vec4(texture(texture2, texcoord2)).r;
+[   4.013][d][vo/gpu/opengl] [ 33] color = color.rgbr;
+[   4.013][d][vo/gpu/opengl] [ 34] color.rgb = mat3(colormatrix) * color.rgb + colormatrix_c;
+[   4.013][d][vo/gpu/opengl] [ 35] color.a = 1.0;
+[   4.013][d][vo/gpu/opengl] [ 36] // color mapping
+[   4.013][d][vo/gpu/opengl] [ 37] color.rgb *= vec3(1.000000);
+[   4.013][d][vo/gpu/opengl] [ 38] color.rgb *= vec3(1.000000);
+[   4.013][d][vo/gpu/opengl] [ 39] out_color = color;
+[   4.013][d][vo/gpu/opengl] [ 40] }
+[   4.020][d][vo/gpu/opengl] shader link log (status=1): 
+[   4.023][d][timeline] stream 0: resize index to 128
+[   4.026][v][cplayer] first video frame after restart shown
+[   4.027][v][cplayer] audio sync: sync_to_video=1, offset=0.001000
+[   4.027][v][cplayer] starting audio playback
+[   4.027][v][cplayer] playback restart complete @ 0.000000
+[   4.029][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   4.029][v][cplayer] Set property: shared-script-properties -> 1
+[   4.036][v][vo/gpu/x11] Disabling screensaver.
+[   4.041][d][osc] osc_init 
+[   4.043][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[   4.044][v][cplayer] Set property: shared-script-properties -> 1
+[  10.954][d][cplayer] Run command: script-binding, flags=73, args=["stats/display-stats"]
+[  11.006][d][cplayer] Run command: define-section, flags=64, args=["input_stats", "i script-binding stats/display-stats\nI script-binding stats/display-stats-toggle\n", "default"]
+[  11.006][d][cplayer] Run command: enable-section, flags=64, args=["input_stats", "allow-hide-cursor+allow-vo-dragging"]
+[  11.007][d][cplayer] Run command: define-section, flags=64, args=["input_forced_stats", "3 script-binding stats/3\n1 script-binding stats/1\n2 script-binding stats/2\n", "force"]
+[  11.007][d][cplayer] Run command: enable-section, flags=64, args=["input_forced_stats", "allow-hide-cursor+allow-vo-dragging"]
+[  11.012][v][osd/libass] Shaper: FriBidi 1.0.10 (SIMPLE) HarfBuzz-ng 2.7.2 (COMPLEX)
+[  11.012][v][osd/libass] Setting up fonts...
+[  11.023][v][osd/libass] Using font provider fontconfig
+[  11.023][v][osd/libass] Done.
+[  11.025][v][osd/libass] fontselect: (sans-serif, 400, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Regular.ttf, 0, Roboto-Regular
+[  11.025][v][osd/libass] fontselect: (sans, 400, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Regular.ttf, 0, Roboto-Regular
+[  11.025][v][osd/libass] fontselect: (sans, 700, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Bold.ttf, 0, Roboto-Bold
+[  11.026][v][osd/libass] fontselect: (monospace, 400, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Regular.ttf, 0, Roboto-Regular
+[  11.048][v][vo/gpu] Reallocating OSD texture to 1024x512.
+[  11.049][d][vo/gpu/opengl] vertex shader source:
+[  11.049][d][vo/gpu/opengl] [  1] #version 330
+[  11.049][d][vo/gpu/opengl] [  2] #define tex1D texture
+[  11.049][d][vo/gpu/opengl] [  3] #define tex3D texture
+[  11.049][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[  11.049][d][vo/gpu/opengl] [  5] in vec2 vertex_position;
+[  11.049][d][vo/gpu/opengl] [  6] in vec2 vertex_texcoord;
+[  11.049][d][vo/gpu/opengl] [  7] out vec2 texcoord;
+[  11.049][d][vo/gpu/opengl] [  8] in vec4 vertex_ass_color;
+[  11.049][d][vo/gpu/opengl] [  9] out vec4 ass_color;
+[  11.049][d][vo/gpu/opengl] [ 10] void main() {
+[  11.049][d][vo/gpu/opengl] [ 11] gl_Position = vec4(vertex_position, 1.0, 1.0);
+[  11.049][d][vo/gpu/opengl] [ 12] texcoord = vertex_texcoord;
+[  11.049][d][vo/gpu/opengl] [ 13] ass_color = vertex_ass_color;
+[  11.049][d][vo/gpu/opengl] [ 14] }
+[  11.050][d][vo/gpu/opengl] fragment shader source:
+[  11.050][d][vo/gpu/opengl] [  1] #version 330
+[  11.050][d][vo/gpu/opengl] [  2] #define tex1D texture
+[  11.050][d][vo/gpu/opengl] [  3] #define tex3D texture
+[  11.050][d][vo/gpu/opengl] [  4] #define LUT_POS(x, lut_size) mix(0.5 / (lut_size), 1.0 - 0.5 / (lut_size), (x))
+[  11.050][d][vo/gpu/opengl] [  5] out vec4 out_color;
+[  11.050][d][vo/gpu/opengl] [  6] in vec2 texcoord;
+[  11.050][d][vo/gpu/opengl] [  7] in vec4 ass_color;
+[  11.050][d][vo/gpu/opengl] [  8] uniform sampler2D osdtex;
+[  11.050][d][vo/gpu/opengl] [  9] uniform vec3 src_luma;
+[  11.050][d][vo/gpu/opengl] [ 10] uniform vec3 dst_luma;
+[  11.050][d][vo/gpu/opengl] [ 11] void main() {
+[  11.050][d][vo/gpu/opengl] [ 12] vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+[  11.050][d][vo/gpu/opengl] [ 13] color = vec4(ass_color.rgb, ass_color.a * texture(osdtex, texcoord).r);
+[  11.050][d][vo/gpu/opengl] [ 14] // color mapping
+[  11.050][d][vo/gpu/opengl] [ 15] color.rgb *= vec3(1.000000);
+[  11.050][d][vo/gpu/opengl] [ 16] color.rgb *= vec3(1.000000);
+[  11.050][d][vo/gpu/opengl] [ 17] out_color = color;
+[  11.050][d][vo/gpu/opengl] [ 18] }
+[  11.053][d][vo/gpu/opengl] shader link log (status=1): 
+[  11.056][d][cplayer] Run command: script-binding, flags=73, args=["stats/display-stats"]
+[  15.005][d][cplayer] Run command: define-section, flags=64, args=["input_stats", "i script-binding stats/display-stats\nI script-binding stats/display-stats-toggle\n", "default"]
+[  15.005][d][cplayer] Run command: enable-section, flags=64, args=["input_stats", "allow-hide-cursor+allow-vo-dragging"]
+[  15.006][d][cplayer] Run command: define-section, flags=64, args=["input_forced_stats", "", "force"]
+[  15.006][d][cplayer] Run command: enable-section, flags=64, args=["input_forced_stats", "allow-hide-cursor+allow-vo-dragging"]
+[  15.175][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  15.175][v][cplayer] Set property: shared-script-properties -> 1
+[  15.203][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[  15.217][v][osd/libass] fontselect: (sans-serif, 400, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Regular.ttf, 0, Roboto-Regular
+[  15.218][v][osd/libass] fontselect: (mpv-osd-symbols, 400, 0) -> /home/nero/.local/share/fonts/Roboto/Roboto-Regular.ttf, 0, Roboto-Regular
+[  15.218][v][osd/libass] Glyph 0xE002 not found, selecting one more font for (mpv-osd-symbols, 400, 0)
+[  15.218][v][osd/libass] fontselect: (mpv-osd-symbols, 400, 0) -> mpv-osd-symbols-Regular, 0, mpv-osd-symbols-Regular
+[  15.220][v][vo/gpu] Reallocating OSD texture to 2048x256.
+[  16.313][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  16.313][v][cplayer] Set property: shared-script-properties -> 1
+[  16.313][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[  30.674][d][cplayer] Run command: cycle, flags=73, args=["fullscreen", "1.000000"]
+[  30.674][v][cplayer] Set property: fullscreen -> 1
+[  30.675][d][osc] osc_init 
+[  30.679][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  30.679][v][cplayer] Set property: shared-script-properties -> 1
+[  30.689][v][vo/gpu] Resize: 1366x745
+[  30.690][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[  30.690][v][vo/gpu] Video source: 1920x960 (1:1)
+[  30.690][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[  30.690][v][vo/gpu] Video scale: 0.711458/0.711458
+[  30.690][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[  30.690][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[  30.690][v][vo/gpu] Reported display depth: 8
+[  30.707][v][vo/gpu] Resize: 1366x768
+[  30.707][v][vo/gpu] Window size: 1366x768 (Borders: l=0 t=0 r=0 b=0)
+[  30.707][v][vo/gpu] Video source: 1920x960 (1:1)
+[  30.707][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 42) 1366x683
+[  30.707][v][vo/gpu] Video scale: 0.711458/0.711458
+[  30.707][v][vo/gpu] OSD borders: l=0 t=42 r=0 b=43
+[  30.707][v][vo/gpu] Video borders: l=0 t=42 r=0 b=43
+[  30.707][v][vo/gpu] Reported display depth: 8
+[  30.713][d][osc] osc_init 
+[  30.716][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  30.717][v][cplayer] Set property: shared-script-properties -> 1
+[  31.640][d][cplayer] Run command: cycle, flags=73, args=["fullscreen", "1.000000"]
+[  31.640][v][cplayer] Set property: fullscreen -> 1
+[  31.657][v][vo/gpu] Resize: 1366x768
+[  31.657][v][vo/gpu] Window size: 1366x768 (Borders: l=0 t=0 r=0 b=0)
+[  31.657][v][vo/gpu] Video source: 1920x960 (1:1)
+[  31.657][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 42) 1366x683
+[  31.657][v][vo/gpu] Video scale: 0.711458/0.711458
+[  31.657][v][vo/gpu] OSD borders: l=0 t=42 r=0 b=43
+[  31.657][v][vo/gpu] Video borders: l=0 t=42 r=0 b=43
+[  31.657][v][vo/gpu] Reported display depth: 8
+[  31.660][d][osc] osc_init 
+[  31.664][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  31.664][v][cplayer] Set property: shared-script-properties -> 1
+[  31.675][v][vo/gpu] Resize: 1366x745
+[  31.675][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[  31.675][v][vo/gpu] Video source: 1920x960 (1:1)
+[  31.675][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[  31.675][v][vo/gpu] Video scale: 0.711458/0.711458
+[  31.675][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[  31.675][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[  31.675][v][vo/gpu] Reported display depth: 8
+[  31.678][d][osc] osc_init 
+[  31.683][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  31.683][v][cplayer] Set property: shared-script-properties -> 1
+[  68.445][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  68.446][v][cplayer] Set property: shared-script-properties -> 1
+[  68.446][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[  74.007][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[  74.007][v][cplayer] Set property: shared-script-properties -> 1
+[  74.008][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[  81.388][d][timeline] stream 1: resize index to 256
+[ 121.581][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 121.581][v][cplayer] Set property: shared-script-properties -> 1
+[ 121.584][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 122.414][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 122.414][v][cplayer] Set property: shared-script-properties -> 1
+[ 122.414][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 123.098][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 123.099][v][cplayer] Set property: shared-script-properties -> 1
+[ 123.100][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 126.355][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 126.355][v][cplayer] Set property: shared-script-properties -> 1
+[ 126.356][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 172.732][d][timeline] stream 1: resize index to 512
+[ 173.250][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 173.250][v][cplayer] Set property: shared-script-properties -> 1
+[ 173.259][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 173.987][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 173.987][v][cplayer] Set property: shared-script-properties -> 1
+[ 173.988][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 213.372][d][cplayer] Run command: cycle, flags=73, args=["fullscreen", "1.000000"]
+[ 213.372][v][cplayer] Set property: fullscreen -> 1
+[ 213.373][d][osc] osc_init 
+[ 213.379][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 213.379][v][cplayer] Set property: shared-script-properties -> 1
+[ 213.388][v][vo/gpu] Resize: 1366x745
+[ 213.388][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[ 213.388][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 213.388][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[ 213.388][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 213.388][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[ 213.388][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[ 213.388][v][vo/gpu] Reported display depth: 8
+[ 213.405][v][vo/gpu] Resize: 1366x768
+[ 213.405][v][vo/gpu] Window size: 1366x768 (Borders: l=0 t=0 r=0 b=0)
+[ 213.405][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 213.405][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 42) 1366x683
+[ 213.405][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 213.405][v][vo/gpu] OSD borders: l=0 t=42 r=0 b=43
+[ 213.405][v][vo/gpu] Video borders: l=0 t=42 r=0 b=43
+[ 213.405][v][vo/gpu] Reported display depth: 8
+[ 213.406][d][osc] osc_init 
+[ 213.408][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 213.409][v][cplayer] Set property: shared-script-properties -> 1
+[ 228.892][d][timeline] stream 1: resize index to 1024
+[ 228.917][d][timeline] stream 0: resize index to 256
+[ 299.396][d][timeline] stream 1: resize index to 2048
+[ 306.356][d][timeline] stream 0: resize index to 512
+[ 453.995][e][ffmpeg] tls: Error in the pull function.
+[ 453.995][w][ffmpeg] https: Will reconnect at 21577568 in 0 second(s), error=I/O error.
+[ 454.110][d][ffmpeg] tcp: Starting connection attempt to 151.99.51.172 port 443
+[ 454.118][d][ffmpeg] tcp: Successfully connected to 151.99.51.172 port 443
+[ 488.241][v][mkv] EOF reached.
+[ 488.241][v][timeline] EOF reached.
+[ 488.245][v][mkv] EOF reached.
+[ 488.245][v][timeline] EOF reached.
+[ 490.631][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 490.631][v][cplayer] Set property: shared-script-properties -> 1
+[ 490.634][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 492.971][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 492.971][v][cplayer] Set property: shared-script-properties -> 1
+[ 492.971][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 496.922][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 496.922][v][cplayer] Set property: shared-script-properties -> 1
+[ 496.923][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 498.200][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 498.200][v][cplayer] Set property: shared-script-properties -> 1
+[ 498.201][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 506.665][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 506.665][v][cplayer] Set property: shared-script-properties -> 1
+[ 506.676][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 507.813][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 507.813][v][cplayer] Set property: shared-script-properties -> 1
+[ 507.814][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 511.937][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 511.937][v][cplayer] Set property: shared-script-properties -> 1
+[ 511.938][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 512.136][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding2"]
+[ 512.390][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 512.390][v][cplayer] Set property: shared-script-properties -> 1
+[ 512.390][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 512.420][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 512.420][v][cplayer] Set property: shared-script-properties -> 1
+[ 512.421][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 513.395][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 513.395][v][cplayer] Set property: shared-script-properties -> 1
+[ 513.396][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 518.160][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 518.160][v][cplayer] Set property: shared-script-properties -> 1
+[ 518.164][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 520.385][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 520.385][v][cplayer] Set property: shared-script-properties -> 1
+[ 520.385][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 521.330][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 521.331][v][cplayer] Set property: shared-script-properties -> 1
+[ 521.336][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 522.052][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 522.052][v][cplayer] Set property: shared-script-properties -> 1
+[ 522.053][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 523.131][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 523.132][v][cplayer] Set property: shared-script-properties -> 1
+[ 523.142][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 524.188][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 524.188][v][cplayer] Set property: shared-script-properties -> 1
+[ 524.189][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 528.020][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 528.020][v][cplayer] Set property: shared-script-properties -> 1
+[ 528.021][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 528.725][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 528.725][v][cplayer] Set property: shared-script-properties -> 1
+[ 528.725][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 532.340][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 532.340][v][cplayer] Set property: shared-script-properties -> 1
+[ 532.341][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 537.260][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 537.261][d][cplayer] Run command: seek, flags=64, args=["32.731200", "absolute-percent", "exact"]
+[ 537.262][v][timeline] queuing seek to 543.122216
+[ 537.262][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 537.262][v][timeline] ...using this range for in-cache seek.
+[ 537.262][v][timeline] seeking stream 0 (video) to packet 538.138000/-9223372036854775808.000000
+[ 537.262][v][timeline] seeking stream 1 (audio) to packet 543.114500/-9223372036854775808.000000
+[ 537.265][v][cplayer] hr-seek, skipping to 543.122216
+[ 537.277][v][vo/gpu/x11] Enabling screensaver.
+[ 537.287][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 537.287][v][vd] Using container aspect ratio.
+[ 537.398][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 537.741][v][cplayer] first video frame after restart shown
+[ 537.742][v][cplayer] audio sync: sync_to_video=1, offset=-0.005000
+[ 537.742][v][cplayer] starting audio playback
+[ 537.742][v][cplayer] playback restart complete @ 543.126000
+[ 537.742][v][vo/gpu/x11] Disabling screensaver.
+[ 538.128][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 538.133][d][cplayer] Run command: seek, flags=64, args=["33.467504", "absolute-percent", "exact"]
+[ 538.133][v][timeline] queuing seek to 555.340022
+[ 538.133][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 538.133][v][timeline] ...using this range for in-cache seek.
+[ 538.133][v][timeline] seeking stream 0 (video) to packet 553.153000/-9223372036854775808.000000
+[ 538.133][v][timeline] seeking stream 1 (audio) to packet 555.334500/-9223372036854775808.000000
+[ 538.137][v][cplayer] hr-seek, skipping to 555.340022
+[ 538.145][v][vo/gpu/x11] Enabling screensaver.
+[ 538.151][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 538.152][v][vd] Using container aspect ratio.
+[ 538.164][d][cplayer] Run command: seek, flags=64, args=["33.614765", "absolute-percent", "keyframes"]
+[ 538.165][v][timeline] queuing seek to 557.783584
+[ 538.167][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 538.167][v][timeline] ...using this range for in-cache seek.
+[ 538.167][v][timeline] adjust seek target 557.783584 -> 553.153000
+[ 538.167][v][timeline] seeking stream 0 (video) to packet 553.153000/-9223372036854775808.000000
+[ 538.167][v][timeline] seeking stream 1 (audio) to packet 553.134500/-9223372036854775808.000000
+[ 538.181][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 538.181][v][vd] Using container aspect ratio.
+[ 538.191][v][cplayer] first video frame after restart shown
+[ 538.191][v][cplayer] audio sync: sync_to_video=1, offset=-0.012000
+[ 538.191][v][cplayer] starting audio playback
+[ 538.192][v][cplayer] playback restart complete @ 553.153000
+[ 538.192][v][vo/gpu/x11] Disabling screensaver.
+[ 538.261][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 539.144][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 539.148][d][cplayer] Run command: seek, flags=64, args=["34.792853", "absolute-percent", "exact"]
+[ 539.149][v][timeline] queuing seek to 577.332074
+[ 539.149][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 539.149][v][timeline] ...using this range for in-cache seek.
+[ 539.149][v][timeline] seeking stream 0 (video) to packet 572.672000/-9223372036854775808.000000
+[ 539.149][v][timeline] seeking stream 1 (audio) to packet 577.314500/-9223372036854775808.000000
+[ 539.153][v][cplayer] hr-seek, skipping to 577.332074
+[ 539.161][v][vo/gpu/x11] Enabling screensaver.
+[ 539.169][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 539.169][v][vd] Using container aspect ratio.
+[ 539.230][d][cplayer] Run command: seek, flags=64, args=["34.792853", "absolute-percent", "keyframes"]
+[ 539.234][v][timeline] queuing seek to 577.332074
+[ 539.234][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 539.234][v][timeline] ...using this range for in-cache seek.
+[ 539.234][v][timeline] adjust seek target 577.332074 -> 572.672000
+[ 539.234][v][timeline] seeking stream 0 (video) to packet 572.672000/-9223372036854775808.000000
+[ 539.234][v][timeline] seeking stream 1 (audio) to packet 572.654500/-9223372036854775808.000000
+[ 539.249][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 539.249][v][vd] Using container aspect ratio.
+[ 539.260][v][cplayer] first video frame after restart shown
+[ 539.260][v][cplayer] audio sync: sync_to_video=1, offset=-0.011000
+[ 539.261][v][cplayer] starting audio playback
+[ 539.261][v][cplayer] playback restart complete @ 572.672000
+[ 539.261][v][vo/gpu/x11] Disabling screensaver.
+[ 539.296][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 540.765][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 540.771][d][cplayer] Run command: seek, flags=64, args=["36.265462", "absolute-percent", "exact"]
+[ 540.772][v][timeline] queuing seek to 601.767686
+[ 540.772][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 540.772][v][timeline] ...using this range for in-cache seek.
+[ 540.772][v][timeline] seeking stream 0 (video) to packet 597.697000/-9223372036854775808.000000
+[ 540.772][v][timeline] seeking stream 1 (audio) to packet 601.754500/-9223372036854775808.000000
+[ 540.774][v][cplayer] hr-seek, skipping to 601.767686
+[ 540.780][v][vo/gpu/x11] Enabling screensaver.
+[ 540.793][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 540.793][v][vd] Using container aspect ratio.
+[ 540.866][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 541.172][v][cplayer] first video frame after restart shown
+[ 541.172][v][cplayer] audio sync: sync_to_video=1, offset=-0.007000
+[ 541.172][v][cplayer] starting audio playback
+[ 541.173][v][cplayer] playback restart complete @ 601.768000
+[ 541.173][v][vo/gpu/x11] Disabling screensaver.
+[ 541.642][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 541.643][d][cplayer] Run command: seek, flags=64, args=["37.443550", "absolute-percent", "exact"]
+[ 541.644][v][timeline] queuing seek to 621.316177
+[ 541.644][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 541.644][v][timeline] ...using this range for in-cache seek.
+[ 541.644][v][timeline] seeking stream 0 (video) to packet 620.186000/-9223372036854775808.000000
+[ 541.644][v][timeline] seeking stream 1 (audio) to packet 621.314500/-9223372036854775808.000000
+[ 541.646][v][cplayer] hr-seek, skipping to 621.316177
+[ 541.659][v][vo/gpu/x11] Enabling screensaver.
+[ 541.659][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 541.659][v][vd] Using container aspect ratio.
+[ 541.725][d][cplayer] Run command: seek, flags=64, args=["37.296289", "absolute-percent", "keyframes"]
+[ 541.726][v][timeline] queuing seek to 618.872615
+[ 541.726][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 541.726][v][timeline] ...using this range for in-cache seek.
+[ 541.726][v][timeline] adjust seek target 618.872615 -> 617.717000
+[ 541.726][v][timeline] seeking stream 0 (video) to packet 617.717000/-9223372036854775808.000000
+[ 541.726][v][timeline] seeking stream 1 (audio) to packet 617.714500/-9223372036854775808.000000
+[ 541.749][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 541.749][v][vd] Using container aspect ratio.
+[ 541.757][v][cplayer] first video frame after restart shown
+[ 541.758][v][cplayer] audio sync: sync_to_video=1, offset=0.004000
+[ 541.758][v][cplayer] starting audio playback
+[ 541.758][v][cplayer] playback restart complete @ 617.717000
+[ 541.758][v][vo/gpu/x11] Disabling screensaver.
+[ 541.794][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 545.765][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 545.769][d][cplayer] Run command: seek, flags=64, args=["39.505203", "absolute-percent", "exact"]
+[ 545.769][v][timeline] queuing seek to 655.526034
+[ 545.769][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 545.769][v][timeline] ...using this range for in-cache seek.
+[ 545.769][v][timeline] seeking stream 0 (video) to packet 653.853000/-9223372036854775808.000000
+[ 545.769][v][timeline] seeking stream 1 (audio) to packet 655.514500/-9223372036854775808.000000
+[ 545.771][v][cplayer] hr-seek, skipping to 655.526034
+[ 545.782][v][vo/gpu/x11] Enabling screensaver.
+[ 545.787][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 545.787][v][vd] Using container aspect ratio.
+[ 545.879][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 545.961][v][cplayer] first video frame after restart shown
+[ 545.961][v][cplayer] audio sync: sync_to_video=1, offset=-0.017000
+[ 545.961][v][cplayer] starting audio playback
+[ 545.962][v][cplayer] playback restart complete @ 655.538000
+[ 545.962][v][vo/gpu/x11] Disabling screensaver.
+[ 547.598][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 547.603][d][cplayer] Run command: seek, flags=64, args=["40.683291", "absolute-percent", "exact"]
+[ 547.604][v][timeline] queuing seek to 675.074524
+[ 547.604][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 547.604][v][timeline] ...using this range for in-cache seek.
+[ 547.604][v][timeline] seeking stream 0 (video) to packet 672.138000/-9223372036854775808.000000
+[ 547.604][v][timeline] seeking stream 1 (audio) to packet 675.074500/-9223372036854775808.000000
+[ 547.606][v][cplayer] hr-seek, skipping to 675.074524
+[ 547.616][v][vo/gpu/x11] Enabling screensaver.
+[ 547.619][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 547.619][v][vd] Using container aspect ratio.
+[ 547.744][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 547.896][v][cplayer] first video frame after restart shown
+[ 547.896][v][cplayer] audio sync: sync_to_video=1, offset=0.007000
+[ 547.896][v][cplayer] starting audio playback
+[ 547.896][v][cplayer] playback restart complete @ 675.074000
+[ 547.896][v][vo/gpu/x11] Disabling screensaver.
+[ 548.349][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 548.350][d][cplayer] Run command: seek, flags=64, args=["41.419596", "absolute-percent", "exact"]
+[ 548.351][v][timeline] queuing seek to 687.292331
+[ 548.351][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 548.351][v][timeline] ...using this range for in-cache seek.
+[ 548.351][v][timeline] seeking stream 0 (video) to packet 687.153000/-9223372036854775808.000000
+[ 548.351][v][timeline] seeking stream 1 (audio) to packet 687.274500/-9223372036854775808.000000
+[ 548.355][v][cplayer] hr-seek, skipping to 687.292331
+[ 548.365][v][vo/gpu/x11] Enabling screensaver.
+[ 548.372][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 548.372][v][vd] Using container aspect ratio.
+[ 548.396][v][cplayer] first video frame after restart shown
+[ 548.397][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 548.397][v][cplayer] audio sync: sync_to_video=1, offset=-0.022000
+[ 548.397][v][cplayer] starting audio playback
+[ 548.397][v][cplayer] playback restart complete @ 687.303000
+[ 548.398][v][vo/gpu/x11] Disabling screensaver.
+[ 549.200][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 549.204][d][cplayer] Run command: seek, flags=64, args=["42.597683", "absolute-percent", "exact"]
+[ 549.204][v][timeline] queuing seek to 706.840821
+[ 549.204][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 549.204][v][timeline] ...using this range for in-cache seek.
+[ 549.204][v][timeline] seeking stream 0 (video) to packet 704.253000/-9223372036854775808.000000
+[ 549.204][v][timeline] seeking stream 1 (audio) to packet 706.834500/-9223372036854775808.000000
+[ 549.206][v][cplayer] hr-seek, skipping to 706.840821
+[ 549.217][v][vo/gpu/x11] Enabling screensaver.
+[ 549.229][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 549.229][v][vd] Using container aspect ratio.
+[ 549.298][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 549.468][v][cplayer] first video frame after restart shown
+[ 549.468][v][cplayer] audio sync: sync_to_video=1, offset=0.002000
+[ 549.469][v][cplayer] starting audio playback
+[ 549.469][v][cplayer] playback restart complete @ 706.839000
+[ 549.469][v][vo/gpu/x11] Disabling screensaver.
+[ 572.878][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 572.879][d][cplayer] Run command: seek, flags=64, args=["45.248380", "absolute-percent", "exact"]
+[ 572.879][v][timeline] queuing seek to 750.824923
+[ 572.879][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 572.879][v][timeline] ...using this range for in-cache seek.
+[ 572.879][v][timeline] seeking stream 0 (video) to packet 746.546000/-9223372036854775808.000000
+[ 572.879][v][timeline] seeking stream 1 (audio) to packet 750.814500/-9223372036854775808.000000
+[ 572.882][v][cplayer] hr-seek, skipping to 750.824923
+[ 572.894][v][vo/gpu/x11] Enabling screensaver.
+[ 572.906][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 572.906][v][vd] Using container aspect ratio.
+[ 572.988][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 573.327][v][cplayer] first video frame after restart shown
+[ 573.327][v][cplayer] audio sync: sync_to_video=1, offset=-0.013000
+[ 573.327][v][cplayer] starting audio playback
+[ 573.327][v][cplayer] playback restart complete @ 750.834000
+[ 573.327][v][vo/gpu/x11] Disabling screensaver.
+[ 573.938][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 573.942][d][cplayer] Run command: seek, flags=64, args=["46.279207", "absolute-percent", "exact"]
+[ 573.942][v][timeline] queuing seek to 767.929852
+[ 573.942][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 573.942][v][timeline] ...using this range for in-cache seek.
+[ 573.942][v][timeline] seeking stream 0 (video) to packet 766.566000/-9223372036854775808.000000
+[ 573.943][v][timeline] seeking stream 1 (audio) to packet 767.914500/-9223372036854775808.000000
+[ 573.944][v][cplayer] hr-seek, skipping to 767.929852
+[ 573.954][v][vo/gpu/x11] Enabling screensaver.
+[ 573.974][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 573.974][v][vd] Using container aspect ratio.
+[ 574.011][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 574.148][v][cplayer] first video frame after restart shown
+[ 574.149][v][cplayer] audio sync: sync_to_video=1, offset=-0.013000
+[ 574.149][v][cplayer] starting audio playback
+[ 574.149][v][cplayer] playback restart complete @ 767.934000
+[ 574.149][v][vo/gpu/x11] Disabling screensaver.
+[ 581.825][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 581.827][d][cplayer] Run command: seek, flags=64, args=["49.224426", "absolute-percent", "exact"]
+[ 581.827][v][timeline] queuing seek to 816.801077
+[ 581.827][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 581.827][v][timeline] ...using this range for in-cache seek.
+[ 581.827][v][timeline] seeking stream 0 (video) to packet 816.616000/-9223372036854775808.000000
+[ 581.827][v][timeline] seeking stream 1 (audio) to packet 816.794500/-9223372036854775808.000000
+[ 581.830][v][cplayer] hr-seek, skipping to 816.801077
+[ 581.843][v][vo/gpu/x11] Enabling screensaver.
+[ 581.846][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 581.846][v][vd] Using container aspect ratio.
+[ 581.876][v][cplayer] first video frame after restart shown
+[ 581.876][v][cplayer] audio sync: sync_to_video=1, offset=0.001000
+[ 581.876][d][cplayer] Run command: seek, flags=64, args=["49.077165", "absolute-percent", "keyframes"]
+[ 581.876][v][timeline] queuing seek to 814.357516
+[ 581.876][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 581.876][v][timeline] ...using this range for in-cache seek.
+[ 581.876][v][timeline] adjust seek target 814.357516 -> 811.611000
+[ 581.876][v][timeline] seeking stream 0 (video) to packet 811.611000/-9223372036854775808.000000
+[ 581.876][v][timeline] seeking stream 1 (audio) to packet 811.594500/-9223372036854775808.000000
+[ 581.896][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 581.896][v][vd] Using container aspect ratio.
+[ 581.903][v][cplayer] first video frame after restart shown
+[ 581.903][v][cplayer] audio sync: sync_to_video=1, offset=-0.010000
+[ 581.903][v][cplayer] starting audio playback
+[ 581.903][v][cplayer] playback restart complete @ 811.611000
+[ 581.903][v][vo/gpu/x11] Disabling screensaver.
+[ 581.955][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 582.823][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 582.827][d][cplayer] Run command: seek, flags=64, args=["50.402513", "absolute-percent", "exact"]
+[ 582.827][v][timeline] queuing seek to 836.349567
+[ 582.827][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 582.827][v][timeline] ...using this range for in-cache seek.
+[ 582.827][v][timeline] seeking stream 0 (video) to packet 831.631000/-9223372036854775808.000000
+[ 582.827][v][timeline] seeking stream 1 (audio) to packet 836.334500/-9223372036854775808.000000
+[ 582.829][v][cplayer] hr-seek, skipping to 836.349567
+[ 582.838][v][vo/gpu/x11] Enabling screensaver.
+[ 582.848][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 582.848][v][vd] Using container aspect ratio.
+[ 582.960][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 583.244][v][cplayer] first video frame after restart shown
+[ 583.245][v][cplayer] audio sync: sync_to_video=1, offset=-0.011000
+[ 583.245][v][cplayer] starting audio playback
+[ 583.245][v][cplayer] playback restart complete @ 836.352000
+[ 583.245][v][vo/gpu/x11] Disabling screensaver.
+[ 583.530][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 583.537][d][cplayer] Run command: seek, flags=64, args=["51.433340", "absolute-percent", "exact"]
+[ 583.537][v][timeline] queuing seek to 853.454496
+[ 583.537][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 583.537][v][timeline] ...using this range for in-cache seek.
+[ 583.537][v][timeline] seeking stream 0 (video) to packet 853.319000/-9223372036854775808.000000
+[ 583.537][v][timeline] seeking stream 1 (audio) to packet 853.434500/-9223372036854775808.000000
+[ 583.539][v][cplayer] hr-seek, skipping to 853.454496
+[ 583.547][v][vo/gpu/x11] Enabling screensaver.
+[ 583.571][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 583.571][v][vd] Using container aspect ratio.
+[ 583.589][v][cplayer] first video frame after restart shown
+[ 583.590][v][cplayer] audio sync: sync_to_video=1, offset=-0.012000
+[ 583.590][v][cplayer] starting audio playback
+[ 583.590][v][cplayer] playback restart complete @ 853.453000
+[ 583.590][v][vo/gpu/x11] Disabling screensaver.
+[ 583.626][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 584.276][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 584.279][d][cplayer] Run command: seek, flags=64, args=["53.053210", "absolute-percent", "exact"]
+[ 584.279][v][timeline] queuing seek to 880.333670
+[ 584.279][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 584.279][v][timeline] ...using this range for in-cache seek.
+[ 584.279][v][timeline] seeking stream 0 (video) to packet 876.276000/-9223372036854775808.000000
+[ 584.279][v][timeline] seeking stream 1 (audio) to packet 880.314500/-9223372036854775808.000000
+[ 584.281][v][cplayer] hr-seek, skipping to 880.333670
+[ 584.293][v][vo/gpu/x11] Enabling screensaver.
+[ 584.302][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 584.302][v][vd] Using container aspect ratio.
+[ 584.367][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 584.691][v][cplayer] first video frame after restart shown
+[ 584.691][v][cplayer] audio sync: sync_to_video=1, offset=-0.009000
+[ 584.692][v][cplayer] starting audio playback
+[ 584.692][v][cplayer] playback restart complete @ 880.330000
+[ 584.692][v][vo/gpu/x11] Disabling screensaver.
+[ 585.245][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 585.245][d][cplayer] Run command: seek, flags=64, args=["54.378559", "absolute-percent", "exact"]
+[ 585.245][v][timeline] queuing seek to 902.325721
+[ 585.245][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 585.245][v][timeline] ...using this range for in-cache seek.
+[ 585.246][v][timeline] seeking stream 0 (video) to packet 901.134000/-9223372036854775808.000000
+[ 585.246][v][timeline] seeking stream 1 (audio) to packet 902.314500/-9223372036854775808.000000
+[ 585.247][v][cplayer] hr-seek, skipping to 902.325721
+[ 585.261][v][vo/gpu/x11] Enabling screensaver.
+[ 585.270][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 585.270][v][vd] Using container aspect ratio.
+[ 585.380][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 585.401][v][cplayer] first video frame after restart shown
+[ 585.401][v][cplayer] audio sync: sync_to_video=1, offset=-0.014000
+[ 585.402][v][cplayer] starting audio playback
+[ 585.402][v][cplayer] playback restart complete @ 902.335000
+[ 585.402][v][vo/gpu/x11] Disabling screensaver.
+[ 586.105][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 586.111][d][cplayer] Run command: seek, flags=64, args=["54.967603", "absolute-percent", "exact"]
+[ 586.112][v][timeline] queuing seek to 912.099967
+[ 586.112][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 586.112][v][timeline] ...using this range for in-cache seek.
+[ 586.112][v][timeline] seeking stream 0 (video) to packet 911.144000/-9223372036854775808.000000
+[ 586.112][v][timeline] seeking stream 1 (audio) to packet 912.094500/-9223372036854775808.000000
+[ 586.114][v][cplayer] hr-seek, skipping to 912.099967
+[ 586.122][v][vo/gpu/x11] Enabling screensaver.
+[ 586.128][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 586.128][v][vd] Using container aspect ratio.
+[ 586.134][d][cplayer] Run command: seek, flags=64, args=["55.114864", "absolute-percent", "keyframes"]
+[ 586.137][v][timeline] queuing seek to 914.543528
+[ 586.137][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 586.137][v][timeline] ...using this range for in-cache seek.
+[ 586.137][v][timeline] adjust seek target 914.543528 -> 911.144000
+[ 586.137][v][timeline] seeking stream 0 (video) to packet 911.144000/-9223372036854775808.000000
+[ 586.137][v][timeline] seeking stream 1 (audio) to packet 911.134500/-9223372036854775808.000000
+[ 586.158][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 586.158][v][vd] Using container aspect ratio.
+[ 586.168][v][cplayer] first video frame after restart shown
+[ 586.168][v][cplayer] audio sync: sync_to_video=1, offset=-0.003000
+[ 586.169][v][cplayer] starting audio playback
+[ 586.169][v][cplayer] playback restart complete @ 911.144000
+[ 586.169][v][vo/gpu/x11] Disabling screensaver.
+[ 586.221][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 586.638][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 586.639][d][cplayer] Run command: seek, flags=64, args=["56.145690", "absolute-percent", "exact"]
+[ 586.640][v][timeline] queuing seek to 931.648457
+[ 586.640][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 586.640][v][timeline] ...using this range for in-cache seek.
+[ 586.640][v][timeline] seeking stream 0 (video) to packet 931.164000/-9223372036854775808.000000
+[ 586.640][v][timeline] seeking stream 1 (audio) to packet 931.634500/-9223372036854775808.000000
+[ 586.645][v][cplayer] hr-seek, skipping to 931.648457
+[ 586.655][v][vo/gpu/x11] Enabling screensaver.
+[ 586.672][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 586.673][v][vd] Using container aspect ratio.
+[ 586.680][d][cplayer] Run command: seek, flags=64, args=["56.292951", "absolute-percent", "keyframes"]
+[ 586.683][v][timeline] queuing seek to 934.092018
+[ 586.683][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 586.683][v][timeline] ...using this range for in-cache seek.
+[ 586.683][v][timeline] adjust seek target 934.092018 -> 931.164000
+[ 586.684][v][timeline] seeking stream 0 (video) to packet 931.164000/-9223372036854775808.000000
+[ 586.684][v][timeline] seeking stream 1 (audio) to packet 931.154500/-9223372036854775808.000000
+[ 586.712][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 586.712][v][vd] Using container aspect ratio.
+[ 586.720][v][cplayer] first video frame after restart shown
+[ 586.720][v][cplayer] audio sync: sync_to_video=1, offset=-0.003000
+[ 586.720][v][cplayer] starting audio playback
+[ 586.721][v][cplayer] playback restart complete @ 931.164000
+[ 586.721][v][vo/gpu/x11] Disabling screensaver.
+[ 586.740][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 587.190][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 587.191][d][cplayer] Run command: seek, flags=64, args=["57.471039", "absolute-percent", "exact"]
+[ 587.192][v][timeline] queuing seek to 953.640508
+[ 587.192][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 587.192][v][timeline] ...using this range for in-cache seek.
+[ 587.192][v][timeline] seeking stream 0 (video) to packet 951.517000/-9223372036854775808.000000
+[ 587.192][v][timeline] seeking stream 1 (audio) to packet 953.634500/-9223372036854775808.000000
+[ 587.194][v][cplayer] hr-seek, skipping to 953.640508
+[ 587.206][v][vo/gpu/x11] Enabling screensaver.
+[ 587.222][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 587.222][v][vd] Using container aspect ratio.
+[ 587.226][d][cplayer] Run command: seek, flags=64, args=["57.323778", "absolute-percent", "keyframes"]
+[ 587.226][v][timeline] queuing seek to 951.196947
+[ 587.226][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 587.226][v][timeline] ...using this range for in-cache seek.
+[ 587.226][v][timeline] adjust seek target 951.196947 -> 947.980000
+[ 587.227][v][timeline] seeking stream 0 (video) to packet 947.980000/-9223372036854775808.000000
+[ 587.227][v][timeline] seeking stream 1 (audio) to packet 947.974500/-9223372036854775808.000000
+[ 587.258][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 587.258][v][vd] Using container aspect ratio.
+[ 587.269][v][cplayer] first video frame after restart shown
+[ 587.270][v][cplayer] audio sync: sync_to_video=1, offset=0.001000
+[ 587.270][v][cplayer] starting audio playback
+[ 587.270][v][cplayer] playback restart complete @ 947.980000
+[ 587.270][v][vo/gpu/x11] Disabling screensaver.
+[ 587.305][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 587.649][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 587.651][d][cplayer] Run command: seek, flags=64, args=["59.385431", "absolute-percent", "exact"]
+[ 587.651][v][timeline] queuing seek to 985.406804
+[ 587.651][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 587.651][v][timeline] ...using this range for in-cache seek.
+[ 587.651][v][timeline] seeking stream 0 (video) to packet 981.280000/-9223372036854775808.000000
+[ 587.651][v][timeline] seeking stream 1 (audio) to packet 985.394500/-9223372036854775808.000000
+[ 587.654][v][cplayer] hr-seek, skipping to 985.406804
+[ 587.666][v][vo/gpu/x11] Enabling screensaver.
+[ 587.680][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 587.680][v][vd] Using container aspect ratio.
+[ 587.750][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 588.069][v][cplayer] first video frame after restart shown
+[ 588.069][v][cplayer] audio sync: sync_to_video=1, offset=-0.016000
+[ 588.070][v][cplayer] starting audio playback
+[ 588.070][v][cplayer] playback restart complete @ 985.417000
+[ 588.070][v][vo/gpu/x11] Disabling screensaver.
+[ 588.139][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 588.141][d][cplayer] Run command: seek, flags=64, args=["61.152562", "absolute-percent", "exact"]
+[ 588.141][v][timeline] queuing seek to 1014.729539
+[ 588.141][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 588.141][v][timeline] ...using this range for in-cache seek.
+[ 588.141][v][timeline] seeking stream 0 (video) to packet 1011.310000/-9223372036854775808.000000
+[ 588.141][v][timeline] seeking stream 1 (audio) to packet 1014.714500/-9223372036854775808.000000
+[ 588.144][v][cplayer] hr-seek, skipping to 1014.729539
+[ 588.157][v][vo/gpu/x11] Enabling screensaver.
+[ 588.165][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 588.165][v][vd] Using container aspect ratio.
+[ 588.231][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 588.478][v][cplayer] first video frame after restart shown
+[ 588.479][v][cplayer] audio sync: sync_to_video=1, offset=-0.009000
+[ 588.479][v][cplayer] starting audio playback
+[ 588.479][v][cplayer] playback restart complete @ 1014.730000
+[ 588.479][v][vo/gpu/x11] Disabling screensaver.
+[ 589.164][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 589.167][d][cplayer] Run command: seek, flags=64, args=["62.330650", "absolute-percent", "exact"]
+[ 589.168][v][timeline] queuing seek to 1034.278030
+[ 589.168][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 589.168][v][timeline] ...using this range for in-cache seek.
+[ 589.168][v][timeline] seeking stream 0 (video) to packet 1033.265000/-9223372036854775808.000000
+[ 589.168][v][timeline] seeking stream 1 (audio) to packet 1034.274500/-9223372036854775808.000000
+[ 589.171][v][cplayer] hr-seek, skipping to 1034.278030
+[ 589.182][v][vo/gpu/x11] Enabling screensaver.
+[ 589.211][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 589.211][v][vd] Using container aspect ratio.
+[ 589.230][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 589.242][d][cplayer] Run command: seek, flags=64, args=["62.477911", "absolute-percent", "keyframes"]
+[ 589.243][v][timeline] queuing seek to 1036.721591
+[ 589.243][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 589.243][v][timeline] ...using this range for in-cache seek.
+[ 589.243][v][timeline] adjust seek target 1036.721591 -> 1036.335000
+[ 589.243][v][timeline] seeking stream 0 (video) to packet 1036.335000/-9223372036854775808.000000
+[ 589.243][v][timeline] seeking stream 1 (audio) to packet 1036.334500/-9223372036854775808.000000
+[ 589.277][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 589.277][v][vd] Using container aspect ratio.
+[ 589.286][v][cplayer] first video frame after restart shown
+[ 589.287][v][cplayer] audio sync: sync_to_video=1, offset=0.006000
+[ 589.287][v][cplayer] starting audio playback
+[ 589.287][v][cplayer] playback restart complete @ 1036.335000
+[ 589.288][v][vo/gpu/x11] Disabling screensaver.
+[ 589.866][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 589.869][d][cplayer] Run command: seek, flags=64, args=["64.097781", "absolute-percent", "exact"]
+[ 589.869][v][timeline] queuing seek to 1063.600765
+[ 589.869][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 589.869][v][timeline] ...using this range for in-cache seek.
+[ 589.869][v][timeline] seeking stream 0 (video) to packet 1062.895000/-9223372036854775808.000000
+[ 589.869][v][timeline] seeking stream 1 (audio) to packet 1063.594500/-9223372036854775808.000000
+[ 589.872][v][cplayer] hr-seek, skipping to 1063.600765
+[ 589.883][v][vo/gpu/x11] Enabling screensaver.
+[ 589.891][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 589.891][v][vd] Using container aspect ratio.
+[ 589.947][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 589.967][v][cplayer] first video frame after restart shown
+[ 589.967][v][cplayer] audio sync: sync_to_video=1, offset=0.005000
+[ 589.968][v][cplayer] starting audio playback
+[ 589.968][v][cplayer] playback restart complete @ 1063.596000
+[ 589.968][v][vo/gpu/x11] Disabling screensaver.
+[ 590.770][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 590.772][d][cplayer] Run command: seek, flags=64, args=["68.073827", "absolute-percent", "exact"]
+[ 590.772][v][timeline] queuing seek to 1129.576919
+[ 590.772][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 590.772][v][timeline] ...using this range for in-cache seek.
+[ 590.773][v][timeline] seeking stream 0 (video) to packet 1126.425000/-9223372036854775808.000000
+[ 590.773][v][timeline] seeking stream 1 (audio) to packet 1129.574500/-9223372036854775808.000000
+[ 590.775][v][cplayer] hr-seek, skipping to 1129.576919
+[ 590.787][v][vo/gpu/x11] Enabling screensaver.
+[ 590.802][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 590.802][v][vd] Using container aspect ratio.
+[ 590.911][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 591.087][v][cplayer] first video frame after restart shown
+[ 591.087][v][cplayer] audio sync: sync_to_video=1, offset=0.003000
+[ 591.087][v][cplayer] starting audio playback
+[ 591.088][v][cplayer] playback restart complete @ 1129.578000
+[ 591.088][v][vo/gpu/x11] Disabling screensaver.
+[ 604.686][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 604.688][d][cplayer] Run command: seek, flags=64, args=["70.871785", "absolute-percent", "exact"]
+[ 604.688][v][timeline] queuing seek to 1176.004583
+[ 604.688][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 604.688][v][timeline] ...using this range for in-cache seek.
+[ 604.689][v][timeline] seeking stream 0 (video) to packet 1172.621000/-9223372036854775808.000000
+[ 604.689][v][timeline] seeking stream 1 (audio) to packet 1175.994500/-9223372036854775808.000000
+[ 604.691][v][cplayer] hr-seek, skipping to 1176.004583
+[ 604.703][v][vo/gpu/x11] Enabling screensaver.
+[ 604.712][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 604.712][v][vd] Using container aspect ratio.
+[ 604.837][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 605.033][v][cplayer] first video frame after restart shown
+[ 605.034][v][cplayer] audio sync: sync_to_video=1, offset=-0.007000
+[ 605.034][v][cplayer] starting audio playback
+[ 605.034][v][cplayer] playback restart complete @ 1176.008000
+[ 605.035][v][vo/gpu/x11] Disabling screensaver.
+[ 605.236][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 605.238][d][cplayer] Run command: seek, flags=64, args=["74.406048", "absolute-percent", "exact"]
+[ 605.238][v][timeline] queuing seek to 1234.650053
+[ 605.238][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 605.238][v][timeline] ...using this range for in-cache seek.
+[ 605.238][v][timeline] seeking stream 0 (video) to packet 1231.530000/-9223372036854775808.000000
+[ 605.238][v][timeline] seeking stream 1 (audio) to packet 1234.634500/-9223372036854775808.000000
+[ 605.241][v][cplayer] hr-seek, skipping to 1234.650053
+[ 605.253][v][vo/gpu/x11] Enabling screensaver.
+[ 605.273][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 605.273][v][vd] Using container aspect ratio.
+[ 605.371][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 605.538][v][cplayer] first video frame after restart shown
+[ 605.538][v][cplayer] audio sync: sync_to_video=1, offset=-0.009000
+[ 605.538][v][cplayer] starting audio playback
+[ 605.538][v][cplayer] playback restart complete @ 1234.650000
+[ 605.539][v][vo/gpu/x11] Disabling screensaver.
+[ 605.974][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 605.977][d][cplayer] Run command: seek, flags=64, args=["76.320440", "absolute-percent", "exact"]
+[ 605.981][v][timeline] queuing seek to 1266.416349
+[ 605.981][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 605.981][v][timeline] ...using this range for in-cache seek.
+[ 605.981][v][timeline] seeking stream 0 (video) to packet 1265.898000/-9223372036854775808.000000
+[ 605.981][v][timeline] seeking stream 1 (audio) to packet 1266.414500/-9223372036854775808.000000
+[ 605.983][v][cplayer] hr-seek, skipping to 1266.416349
+[ 605.990][v][vo/gpu/x11] Enabling screensaver.
+[ 606.006][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 606.006][v][vd] Using container aspect ratio.
+[ 606.016][d][cplayer] Run command: seek, flags=64, args=["76.320440", "absolute-percent", "keyframes"]
+[ 606.019][v][timeline] queuing seek to 1266.416349
+[ 606.019][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 606.019][v][timeline] ...using this range for in-cache seek.
+[ 606.022][v][timeline] adjust seek target 1266.416349 -> 1265.898000
+[ 606.022][v][timeline] seeking stream 0 (video) to packet 1265.898000/-9223372036854775808.000000
+[ 606.022][v][timeline] seeking stream 1 (audio) to packet 1265.894500/-9223372036854775808.000000
+[ 606.045][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 606.045][v][vd] Using container aspect ratio.
+[ 606.053][v][cplayer] first video frame after restart shown
+[ 606.053][v][cplayer] audio sync: sync_to_video=1, offset=0.003000
+[ 606.053][v][cplayer] starting audio playback
+[ 606.053][v][cplayer] playback restart complete @ 1265.898000
+[ 606.054][v][vo/gpu/x11] Disabling screensaver.
+[ 606.056][d][cplayer] Run command: seek, flags=64, args=["76.467701", "absolute-percent", "keyframes"]
+[ 606.057][v][timeline] queuing seek to 1268.859911
+[ 606.057][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 606.057][v][timeline] ...using this range for in-cache seek.
+[ 606.058][v][timeline] adjust seek target 1268.859911 -> 1265.898000
+[ 606.058][v][timeline] seeking stream 0 (video) to packet 1265.898000/-9223372036854775808.000000
+[ 606.058][v][timeline] seeking stream 1 (audio) to packet 1265.894500/-9223372036854775808.000000
+[ 606.071][v][vo/gpu/x11] Enabling screensaver.
+[ 606.088][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 606.088][v][vd] Using container aspect ratio.
+[ 606.089][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 606.096][v][cplayer] first video frame after restart shown
+[ 606.097][v][cplayer] audio sync: sync_to_video=1, offset=0.003000
+[ 606.097][v][cplayer] starting audio playback
+[ 606.097][v][cplayer] playback restart complete @ 1265.898000
+[ 606.098][v][vo/gpu/x11] Disabling screensaver.
+[ 606.484][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 606.485][d][cplayer] Run command: seek, flags=64, args=["78.529354", "absolute-percent", "exact"]
+[ 606.485][v][timeline] queuing seek to 1303.069768
+[ 606.485][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 606.485][v][timeline] ...using this range for in-cache seek.
+[ 606.486][v][timeline] seeking stream 0 (video) to packet 1302.518000/-9223372036854775808.000000
+[ 606.486][v][timeline] seeking stream 1 (audio) to packet 1303.054500/-9223372036854775808.000000
+[ 606.488][v][cplayer] hr-seek, skipping to 1303.069768
+[ 606.500][v][vo/gpu/x11] Enabling screensaver.
+[ 606.509][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 606.510][v][vd] Using container aspect ratio.
+[ 606.516][d][cplayer] Run command: seek, flags=64, args=["78.529354", "absolute-percent", "keyframes"]
+[ 606.516][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 606.517][v][timeline] queuing seek to 1303.069768
+[ 606.517][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 606.517][v][timeline] ...using this range for in-cache seek.
+[ 606.517][v][timeline] adjust seek target 1303.069768 -> 1302.518000
+[ 606.517][v][timeline] seeking stream 0 (video) to packet 1302.518000/-9223372036854775808.000000
+[ 606.517][v][timeline] seeking stream 1 (audio) to packet 1302.514500/-9223372036854775808.000000
+[ 606.542][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 606.542][v][vd] Using container aspect ratio.
+[ 606.558][v][cplayer] first video frame after restart shown
+[ 606.558][v][cplayer] audio sync: sync_to_video=1, offset=0.003000
+[ 606.559][v][cplayer] starting audio playback
+[ 606.559][v][cplayer] playback restart complete @ 1302.518000
+[ 606.559][v][vo/gpu/x11] Disabling screensaver.
+[ 606.995][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 606.996][d][cplayer] Run command: seek, flags=64, args=["78.971137", "absolute-percent", "exact"]
+[ 606.996][v][timeline] queuing seek to 1310.400452
+[ 606.996][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 606.996][v][timeline] ...using this range for in-cache seek.
+[ 606.996][v][timeline] seeking stream 0 (video) to packet 1306.038000/-9223372036854775808.000000
+[ 606.996][v][timeline] seeking stream 1 (audio) to packet 1310.394500/-9223372036854775808.000000
+[ 606.998][v][cplayer] hr-seek, skipping to 1310.400452
+[ 607.010][v][vo/gpu/x11] Enabling screensaver.
+[ 607.021][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 607.021][v][vd] Using container aspect ratio.
+[ 607.100][d][cplayer] Run command: seek, flags=64, args=["78.971137", "absolute-percent", "keyframes"]
+[ 607.102][v][timeline] queuing seek to 1310.400452
+[ 607.102][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 607.102][v][timeline] ...using this range for in-cache seek.
+[ 607.102][v][timeline] adjust seek target 1310.400452 -> 1306.038000
+[ 607.102][v][timeline] seeking stream 0 (video) to packet 1306.038000/-9223372036854775808.000000
+[ 607.102][v][timeline] seeking stream 1 (audio) to packet 1306.034500/-9223372036854775808.000000
+[ 607.128][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 607.128][v][vd] Using container aspect ratio.
+[ 607.137][v][cplayer] first video frame after restart shown
+[ 607.137][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 607.138][v][cplayer] audio sync: sync_to_video=1, offset=0.003000
+[ 607.138][v][cplayer] starting audio playback
+[ 607.138][v][cplayer] playback restart complete @ 1306.038000
+[ 607.138][v][vo/gpu/x11] Disabling screensaver.
+[ 607.992][d][cplayer] Run command: set, flags=73, args=["fullscreen", "no"]
+[ 607.992][v][cplayer] Set property: fullscreen=no -> 1
+[ 607.994][d][osc] osc_init 
+[ 607.998][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 607.998][v][cplayer] Set property: shared-script-properties -> 1
+[ 608.008][v][vo/gpu] Resize: 1366x768
+[ 608.008][v][vo/gpu] Window size: 1366x768 (Borders: l=0 t=0 r=0 b=0)
+[ 608.008][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 608.008][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 42) 1366x683
+[ 608.008][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 608.008][v][vo/gpu] OSD borders: l=0 t=42 r=0 b=43
+[ 608.008][v][vo/gpu] Video borders: l=0 t=42 r=0 b=43
+[ 608.008][v][vo/gpu] Reported display depth: 8
+[ 608.025][v][vo/gpu] Resize: 1366x745
+[ 608.025][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[ 608.025][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 608.025][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[ 608.025][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 608.025][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[ 608.025][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[ 608.025][v][vo/gpu] Reported display depth: 8
+[ 608.032][d][osc] osc_init 
+[ 608.034][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 608.034][v][cplayer] Set property: shared-script-properties -> 1
+[ 608.942][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding2"]
+[ 609.177][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 609.177][v][cplayer] Set property: shared-script-properties -> 1
+[ 609.178][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 620.922][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 620.922][v][cplayer] Set property: shared-script-properties -> 1
+[ 620.950][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 622.297][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 622.297][v][cplayer] Set property: shared-script-properties -> 1
+[ 622.298][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 622.723][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 622.723][v][cplayer] Set property: shared-script-properties -> 1
+[ 622.731][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 627.527][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 627.528][d][cplayer] Run command: seek, flags=64, args=["81.728670", "absolute-percent", "exact"]
+[ 627.528][v][timeline] queuing seek to 1356.157323
+[ 627.528][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 627.528][v][timeline] ...using this range for in-cache seek.
+[ 627.529][v][timeline] seeking stream 0 (video) to packet 1355.621000/-9223372036854775808.000000
+[ 627.529][v][timeline] seeking stream 1 (audio) to packet 1356.154500/-9223372036854775808.000000
+[ 627.532][v][cplayer] hr-seek, skipping to 1356.157323
+[ 627.544][v][vo/gpu/x11] Enabling screensaver.
+[ 627.554][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 627.554][v][vd] Using container aspect ratio.
+[ 627.566][d][cplayer] Run command: seek, flags=64, args=["81.585739", "absolute-percent", "keyframes"]
+[ 627.571][v][timeline] queuing seek to 1353.785612
+[ 627.571][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 627.571][v][timeline] ...using this range for in-cache seek.
+[ 627.571][v][timeline] adjust seek target 1353.785612 -> 1352.034000
+[ 627.571][v][timeline] seeking stream 0 (video) to packet 1352.034000/-9223372036854775808.000000
+[ 627.571][v][timeline] seeking stream 1 (audio) to packet 1352.014500/-9223372036854775808.000000
+[ 627.600][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 627.600][v][vd] Using container aspect ratio.
+[ 627.609][v][cplayer] first video frame after restart shown
+[ 627.609][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 627.610][v][cplayer] audio sync: sync_to_video=1, offset=-0.013000
+[ 627.610][v][cplayer] starting audio playback
+[ 627.610][v][cplayer] playback restart complete @ 1352.034000
+[ 627.610][v][vo/gpu/x11] Disabling screensaver.
+[ 628.297][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 628.298][d][cplayer] Run command: seek, flags=64, args=["84.444356", "absolute-percent", "exact"]
+[ 628.298][v][timeline] queuing seek to 1401.219825
+[ 628.298][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 628.298][v][timeline] ...using this range for in-cache seek.
+[ 628.298][v][timeline] seeking stream 0 (video) to packet 1400.666000/-9223372036854775808.000000
+[ 628.298][v][timeline] seeking stream 1 (audio) to packet 1401.214500/-9223372036854775808.000000
+[ 628.303][v][cplayer] hr-seek, skipping to 1401.219825
+[ 628.313][v][vo/gpu/x11] Enabling screensaver.
+[ 628.321][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 628.322][v][vd] Using container aspect ratio.
+[ 628.374][v][cplayer] first video frame after restart shown
+[ 628.374][v][cplayer] audio sync: sync_to_video=1, offset=0.004000
+[ 628.374][v][cplayer] starting audio playback
+[ 628.375][v][cplayer] playback restart complete @ 1401.217000
+[ 628.375][v][vo/gpu/x11] Disabling screensaver.
+[ 628.409][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 629.216][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 629.219][d][cplayer] Run command: seek, flags=64, args=["86.016596", "absolute-percent", "exact"]
+[ 629.220][v][timeline] queuing seek to 1427.308642
+[ 629.220][v][timeline] cached range 0: 163.463000 <-> 1659.314500 (bof=0, eof=1)
+[ 629.220][v][timeline] ...using this range for in-cache seek.
+[ 629.220][v][timeline] seeking stream 0 (video) to packet 1425.524000/-9223372036854775808.000000
+[ 629.220][v][timeline] seeking stream 1 (audio) to packet 1427.294500/-9223372036854775808.000000
+[ 629.223][v][cplayer] hr-seek, skipping to 1427.308642
+[ 629.231][v][vo/gpu/x11] Enabling screensaver.
+[ 629.258][v][vd] Decoder format: 1920x960 [0:1] yuv420p bt.709/auto/auto/limited/auto CL=unknown
+[ 629.258][v][vd] Using container aspect ratio.
+[ 629.360][d][cplayer] Run command: script-binding, flags=73, args=["osc/__keybinding5"]
+[ 629.429][v][cplayer] first video frame after restart shown
+[ 629.429][v][cplayer] audio sync: sync_to_video=1, offset=-0.008000
+[ 629.429][v][cplayer] starting audio playback
+[ 629.429][v][cplayer] playback restart complete @ 1427.309000
+[ 629.429][v][vo/gpu/x11] Disabling screensaver.
+[ 633.511][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 633.512][v][cplayer] Set property: shared-script-properties -> 1
+[ 633.512][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 638.528][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 638.528][v][cplayer] Set property: shared-script-properties -> 1
+[ 638.529][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 639.515][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 639.515][v][cplayer] Set property: shared-script-properties -> 1
+[ 639.516][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 645.168][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 645.168][v][cplayer] Set property: shared-script-properties -> 1
+[ 645.171][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 645.937][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 645.937][v][cplayer] Set property: shared-script-properties -> 1
+[ 645.937][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 662.199][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 662.199][v][cplayer] Set property: shared-script-properties -> 1
+[ 662.211][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 663.047][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 663.048][v][cplayer] Set property: shared-script-properties -> 1
+[ 663.048][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 678.384][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 678.384][v][cplayer] Set property: shared-script-properties -> 1
+[ 678.386][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 679.334][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 679.334][v][cplayer] Set property: shared-script-properties -> 1
+[ 679.334][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 679.815][d][cplayer] Run command: cycle, flags=73, args=["fullscreen", "1.000000"]
+[ 679.816][v][cplayer] Set property: fullscreen -> 1
+[ 679.817][d][osc] osc_init 
+[ 679.820][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 679.820][v][cplayer] Set property: shared-script-properties -> 1
+[ 679.833][v][vo/gpu] Resize: 1366x745
+[ 679.833][v][vo/gpu] Window size: 1366x745 (Borders: l=0 t=0 r=0 b=0)
+[ 679.833][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 679.833][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 31) 1366x683
+[ 679.833][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 679.833][v][vo/gpu] OSD borders: l=0 t=31 r=0 b=31
+[ 679.833][v][vo/gpu] Video borders: l=0 t=31 r=0 b=31
+[ 679.833][v][vo/gpu] Reported display depth: 8
+[ 679.849][v][vo/gpu] Resize: 1366x768
+[ 679.849][v][vo/gpu] Window size: 1366x768 (Borders: l=0 t=0 r=0 b=0)
+[ 679.849][v][vo/gpu] Video source: 1920x960 (1:1)
+[ 679.849][v][vo/gpu] Video display: (0, 0) 1920x960 -> (0, 42) 1366x683
+[ 679.849][v][vo/gpu] Video scale: 0.711458/0.711458
+[ 679.849][v][vo/gpu] OSD borders: l=0 t=42 r=0 b=43
+[ 679.849][v][vo/gpu] Video borders: l=0 t=42 r=0 b=43
+[ 679.849][v][vo/gpu] Reported display depth: 8
+[ 679.852][d][osc] osc_init 
+[ 679.858][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 679.858][v][cplayer] Set property: shared-script-properties -> 1
+[ 680.517][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 680.518][v][cplayer] Set property: shared-script-properties -> 1
+[ 680.519][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 681.430][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 681.430][v][cplayer] Set property: shared-script-properties -> 1
+[ 681.431][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 690.627][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 690.627][v][cplayer] Set property: shared-script-properties -> 1
+[ 690.631][d][cplayer] Run command: enable-section, flags=64, args=["input", ""]
+[ 691.362][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 691.362][v][cplayer] Set property: shared-script-properties -> 1
+[ 691.363][d][cplayer] Run command: disable-section, flags=64, args=["input"]
+[ 692.712][d][cplayer] Run command: quit, flags=73, args=["0"]
+[ 692.713][i][cplayer] Saving state.
+[ 692.714][v][cplayer] EOF code: 5  
+[ 692.717][d][ad] Uninit decoder.
+[ 692.717][d][vd] Uninit decoder.
+[ 692.721][d][cplayer] Terminating demuxers...
+[ 692.721][d][ffmpeg] AVIOContext: Statistics: 137076169 bytes read, 0 seeks
+[ 692.724][d][ffmpeg] AVIOContext: Statistics: 22287674 bytes read, 0 seeks
+[ 692.727][v][vo/gpu/x11] Enabling screensaver.
+[ 692.907][d][cplayer] Done terminating demuxers.
+[ 692.908][v][cplayer] finished playback, success (reason 3)
+[ 692.908][i][cplayer] 
+[ 692.908][i][cplayer] 
+[ 692.908][i][cplayer] Exiting... (Quit)
+[ 692.909][d][osc] osc_init 
+[ 692.911][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "append", "osc-margins=0.000000,0.000000,0.000000,0.000000"]
+[ 692.911][d][ytdl_hook] Exiting...
+[ 692.911][v][cplayer] Set property: shared-script-properties -> 1
+[ 692.911][d][cplayer] Run command: change-list, flags=64, args=["shared-script-properties", "remove", "osc-margins"]
+[ 692.911][v][cplayer] Set property: shared-script-properties -> 1
+[ 692.912][d][stats] Exiting...
+[ 692.913][d][osc] Exiting...
+[ 692.913][d][console] Exiting...
+[ 692.920][v][ao/alsa] draining...
+[ 692.935][d][vo/gpu] flushing shader cache
+[ 692.941][d][vo/gpu/x11] uninit ...

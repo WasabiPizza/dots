@@ -1,0 +1,80 @@
+env:
+  TERM: alacritty
+  COLORTERM: truecolor
+
+#shell:
+#  program: /bin/zsh
+#  args:
+#    - -l
+#    - -c
+#    - "tmux attach || tmux"
+  
+window:
+  dimensions:
+    columns: 0
+    lines: 0 
+
+  padding:
+    x: 10
+    y: 10 
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: Iosevka Term 
+    style: Regular 
+
+#  bold:
+#    family: Iosevka Term 
+#    style: Bold
+
+#  italic:
+#    family: Iosevka Term 
+#    style: Italic
+
+  size: 8.0
+
+colors:
+  primary:
+    background: '#ffffff'
+    foreground: '#000000'
+
+  cursor:
+    cursor: '0x9cd8e7'
+
+  normal:
+    black:   '#111111'
+    red:     '#63424b'
+    green:   '#536872'
+    yellow:  '#365b73'
+    blue:    '#614051'
+    magenta: '#277050'
+    cyan:    '#9f4a9b'
+    white:   '#f2f3f4'
+
+  bright:
+    black:   '#888888'
+    red:     '#63424b'
+    green:   '#536872'
+    yellow:  '#365b73'
+    blue:    '#614051'
+    magenta: '#277050'
+    cyan:    '#9f4a9b'
+    white:   '#f2f3f4'
+
+  indexed_colors: []
+
+background_opacity: 1.0
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+live_config_reload: true
+
+key_bindings:
+  - { key: V,        mods: Control, action: Paste                            }
+  - { key: C,        mods: Control, action: Copy                             }
