@@ -1,4 +1,5 @@
 elogind \
+mesa-dri \
 xorg-minimal \
 xset \
 setxkbmap \
@@ -33,3 +34,6 @@ alsa-utils \
 alsa-plugins-pulseaudio \
 pulseaudio \
 geany \
+font-awesome5 \
+htop \
+xtools \
