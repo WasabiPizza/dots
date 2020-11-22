@@ -37,3 +37,7 @@ geany \
 font-awesome5 \
 htop \
 xtools \
+tlp \
+rclone \
+stubby \
+libsecret \
